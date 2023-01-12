@@ -16,9 +16,9 @@
 		overflow: hidden;
    		top: 0px;
 		height: 50px;
-		background-color: var(--brandDarkBlue);
+		background-color: white;
 		margin-bottom: 20px;
-		border-bottom: 1px solid var(--brandLightBlue);
+		border-bottom: solid 1px black;
 		width: 100%;
 		min-width: 200px;
 		padding-left: 0px;

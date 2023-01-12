@@ -23,7 +23,6 @@
 		content="width=device-width, initial-scale=1, minimum-scale=1"
 	/>
 
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 
     <!-- <title>Place and Politics in Toronto</title>
     <meta name="description" content="Place and Politics in Toronto">
@@ -51,6 +50,28 @@
 
 <main>
 
-	hello world
+	<div id="page">
+        <iframe class="slides" src="/mapping-workshops-2023/slides/index.html"/>
+    </div>
 
 </main>
+
+
+<style>
+
+
+    #page {
+        background-color: red;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slides {
+        border: none;
+        /* padding: 0px; */
+        /* margin: -10px; */
+        width: 100vw;
+        height: 100vh;
+    }
+
+</style>

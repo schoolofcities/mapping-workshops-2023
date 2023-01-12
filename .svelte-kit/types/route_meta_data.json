@@ -5,5 +5,9 @@
 	"/spatial-analysis-MUI2000": [
 		"src/routes/spatial-analysis-MUI2000/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/spatial-analysis-MUI2000/intro-spatial-data": [
+		"src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js",
+		"src/routes/+layout.js"
 	]
 }
