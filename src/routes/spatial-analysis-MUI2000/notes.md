@@ -32,7 +32,6 @@ e.g. Toronto Open Data
 
 ACTIVITY - take a look, what data on there would be useful for studying main streets, and why
 
-
 Show map for example
 
 e.g. Historical Business Data Axle - access via U of T
