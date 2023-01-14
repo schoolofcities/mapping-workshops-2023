@@ -23,6 +23,7 @@
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
+					<p style="font-size:21px;">Jeff Allen --- January 16, 2023 --- for MUI2000</p>
 				</section>
 
 				<section>
@@ -31,21 +32,93 @@
 						attribute data (the <strong>what</strong>)</li> + location data (the <strong>where</strong>)</li>
 					</section>
 					<section>
-						<img height=250px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic_table.png"> ...
-						<img height=250px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic.png">
+						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic_table.png"> &nbsp;
+						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic.png">
 					</section>
 				</section>
 
 				<section>
-					<h3>Vector Data</h3>
-					<p>Representing the features as points, lines, or polygons </p>
-					<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
-					<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
-					<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
+					<section>
+						<h3>Vector Data</h3>
+						<p>Representing features as <b><u>points</u></b>, <b><u>lines</u></b>, or <b><u>polygons</u></b> </p>
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
+					</section>
+					<section>
+						<p style="font-size:21px;">
+							Vector data is encoded as a series of X,Y (e.g. longitude, latitude) coordinates
+						</p>
+						<img height=500px src="imgs/spatial-analysis-MUI-intro-spatial-data/geojson-coords.png">
+						<p style="font-size:13px;">
+							<b>Source:</b> Structure of <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a> data, a common open-source spatial data format.
+						</p>
+					</section>
+
+					<section>
+						<p style="font-size:21px;">
+							Vector data of various built environment features along Bloor St from <a href="https://www.openstreetmap.org/#map=18/43.66410/-79.41826">OpenStreetMap</a>
+						</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/osm-bloor.png">
+					</section>
+
+					<section data-background-image="https://jamaps.github.io/maps/cqlm20213119_2550x1650.png">
+						<p style="font-size:25px; color:white; text-align: left;">e.g. GPS Data</p>
+						<p style="font-size:20px; color:white; text-align: left;">- plethora of points, each with a date/time</p>
+						<p style="font-size:20px; color:white; text-align: left;">- can aggregate to "trips" and "visits"</p>
+					</section>
+
+					<section data-background-image="imgs/spatial-analysis-MUI-intro-spatial-data/flow-toronto.png">
+						<p style="font-size:25px; color:white; text-align: left;">e.g. aggregated flow data</p>
+						<p style="font-size:20px; color:white; text-align: left;">- <a href="https://flowmap.blue/">https://flowmap.blue/</a></p>
+					</section>
+					
 				</section>
 
 				<section>
-					
+					<section>
+						<h3>Raster Data</h3>
+						<p>Represents space as a continuous grid, with each cell having a value</p>
+						<img src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_raster_ex.png">
+						<p style="font-size:13px;">
+							DEM of Toronto and Lake Ontario (Data from NOAA)
+						</p>
+					</section>
+
+					<section>
+						<p style="font-size:25px">e.g. Satellite Imagery
+						<p style="font-size:25px"><a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/">Historical Aerial Imagery of Toronto</a>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/aerial-imagery.png">
+
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h3>Data Licenses & Use Agreements</h3>
+						<ul>
+							<li><h4>Open Data</h4></li>
+							<ul>
+								<li>e.g. City of Toronto Open Data</li>
+								<li>e.g. Canadian Census</li>
+							</ul>
+							<li><h4>Restricted Data</h4></li>
+							<ul>
+								<li>e.g. Historical Business Data (Data Axle)</li>
+								<li>e.g. Environics Analytics Data</li>
+							</ul>			
+						</ul>
+					</section>
+
+					<section>
+						<p>Canadian Census </p>
+						<p style="font-size:20px;">- many variables on demographics, socio-economic status, etc.<p>
+						<p style="font-size:20px;">- summary data at different levels of geography<p>
+						<p style="font-size:20px;">- check out <a href="https://censusmapper.ca">CensusMapper</a> to view and download data</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/pop-density.png">
+					</section>
+
 				</section>
 
 			</div>

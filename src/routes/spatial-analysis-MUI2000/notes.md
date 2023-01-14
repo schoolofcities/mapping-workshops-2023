@@ -26,11 +26,12 @@ e.g. Flow Data - Line data with values
 
 Data sources - data use agreements
 
+e.g. Census data
+
 e.g. Toronto Open Data
 
 ACTIVITY - take a look, what data on there would be useful for studying main streets, and why
 
-e.g. Census data
 
 Show map for example
 
