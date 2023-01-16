@@ -1,0 +1,154 @@
+{
+  "src/routes/assets/top-logo.svg": {
+    "file": "_app/immutable/assets/top-logo-ed729436.svg",
+    "src": "src/routes/assets/top-logo.svg"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/start-0bf3f1ee.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-3c40d2d2.js",
+      "_singletons-16fdab0b.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/nodes/0.js",
+      ".svelte-kit/generated/nodes/1.js",
+      ".svelte-kit/generated/nodes/2.js",
+      ".svelte-kit/generated/nodes/3.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
+    "file": "_app/immutable/components/layout.svelte-68a2bd3c.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-3c40d2d2.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-ccc29c5d.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-3c40d2d2.js",
+      "_singletons-16fdab0b.js"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/+page.svelte": {
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/_page.svelte-58dc1460.js",
+    "src": "src/routes/spatial-analysis-MUI2000/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-3c40d2d2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-f84c9be5.css",
+      "_app/immutable/assets/styles-4b431f91.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/top-logo-ed729436.svg"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte": {
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/intro-spatial-data/_page.svelte-2f96deae.js",
+    "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-3c40d2d2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-250bdaba.css",
+      "_app/immutable/assets/styles-4b431f91.css"
+    ]
+  },
+  "src/routes/+layout.js": {
+    "file": "_app/immutable/modules/pages/_layout.js-f2b8fde1.js",
+    "src": "src/routes/+layout.js",
+    "isEntry": true,
+    "imports": [
+      "__layout-c2780a85.js"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/+page.js": {
+    "file": "_app/immutable/modules/pages/spatial-analysis-MUI2000/_page.js-e4dde7b4.js",
+    "src": "src/routes/spatial-analysis-MUI2000/+page.js",
+    "isEntry": true,
+    "imports": [
+      "__page-49c99631.js"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js": {
+    "file": "_app/immutable/modules/pages/spatial-analysis-MUI2000/intro-spatial-data/_page.js-fb7df706.js",
+    "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js",
+    "isEntry": true,
+    "imports": [
+      "__page-32babd19.js"
+    ]
+  },
+  "_singletons-16fdab0b.js": {
+    "file": "_app/immutable/chunks/singletons-16fdab0b.js",
+    "imports": [
+      "_index-3c40d2d2.js"
+    ]
+  },
+  "_index-3c40d2d2.js": {
+    "file": "_app/immutable/chunks/index-3c40d2d2.js"
+  },
+  "__layout-c2780a85.js": {
+    "file": "_app/immutable/chunks/_layout-c2780a85.js"
+  },
+  "__page-49c99631.js": {
+    "file": "_app/immutable/chunks/_page-49c99631.js"
+  },
+  "__page-32babd19.js": {
+    "file": "_app/immutable/chunks/_page-32babd19.js"
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-bf69d724.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__layout-c2780a85.js",
+      "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-6f82a151.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-088e15a5.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-49c99631.js",
+      "src/routes/spatial-analysis-MUI2000/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-2271d8f1.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-32babd19.js",
+      "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/+page.css": {
+    "file": "_app/immutable/assets/_page-f84c9be5.css",
+    "src": "src/routes/spatial-analysis-MUI2000/+page.css"
+  },
+  "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css": {
+    "file": "_app/immutable/assets/_page-250bdaba.css",
+    "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css"
+  },
+  "styles.css": {
+    "file": "_app/immutable/assets/styles-4b431f91.css",
+    "src": "styles.css"
+  }
+}

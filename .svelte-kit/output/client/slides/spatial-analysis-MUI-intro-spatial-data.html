@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white-sofc.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h3>Introduction to Spatial Analysis</h3>
+					<p style="font-size:28px;">using data to analyze the how and why of where</p>
+					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
+					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
+					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
+					<p style="font-size:21px;">Jeff Allen --- January 16, 2023 --- for MUI2000</p>
+				</section>
+
+				<section>
+					<section>
+						<h4>Spatial Data</h4>
+						attribute data (the <strong>what</strong>)</li> + location data (the <strong>where</strong>)</li>
+					</section>
+
+					<section>
+						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic_table.png"> &nbsp;
+						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic.png">
+					</section>
+
+					<section>
+						<h4>Vector Data</h4>
+						<p>Representing features as <b><u>points</u></b>, <b><u>lines</u></b>, or <b><u>polygons</u></b> </p>
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
+						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
+					</section>
+
+					<section>
+						<p style="font-size:21px;">
+							Vector data is encoded as a series of X,Y (e.g. longitude, latitude) coordinates
+						</p>
+						<img height=500px src="imgs/spatial-analysis-MUI-intro-spatial-data/geojson-coords.png">
+						<p style="font-size:13px;">
+							<b>Source:</b> Structure of <a href="https://en.wikipedia.org/wiki/GeoJSON">GeoJSON</a> data, a common open-source spatial data format.
+						</p>
+					</section>
+
+					<section>
+						<p style="font-size:21px;">
+							Vector data of various built environment features along Bloor Street from <a href="https://www.openstreetmap.org/#map=18/43.66410/-79.41826">OpenStreetMap</a>
+						</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/osm-bloor.png">
+					</section>
+
+					<section data-background-image="https://jamaps.github.io/maps/cqlm20213119_2550x1650.png">
+						<p style="font-size:25px; color:white; text-align: left;">e.g. GPS Data</p>
+						<p style="font-size:20px; color:white; text-align: left;">- plethora of points, each with a date/time</p>
+						<p style="font-size:20px; color:white; text-align: left;">- can aggregate to "trips" and "visits"</p>
+					</section>
+
+					<section data-background-image="imgs/spatial-analysis-MUI-intro-spatial-data/flow-toronto.png">
+						<p style="font-size:25px; color:white; text-align: left;">e.g. aggregated flow data</p>
+						<p style="font-size:20px; color:white; text-align: left;">- <a href="https://flowmap.blue/">https://flowmap.blue/</a></p>
+					</section>
+			
+					<section>
+						<h4>Raster Data</h4>
+						<p>Represents space as a continuous grid, with each cell having a value</p>
+						<img src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_raster_ex.png">
+						<p style="font-size:13px;">
+							DEM of Toronto and Lake Ontario (Data from NOAA)
+						</p>
+					</section>
+
+					<section>
+						<p style="font-size:25px">e.g. Satellite Imagery
+						<p style="font-size:25px"><a href="https://schoolofcities.github.io/historical-aerial-imagery-toronto/">Historical Aerial Imagery of Toronto</a>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/aerial-imagery.png">
+
+					</section>
+
+					<section>
+						<h4>Data Licenses & Use Agreements</h4>
+						<ul>
+							<li><p>Open Data</p></li>
+							<ul>
+								<li>e.g. City of Toronto Open Data</li>
+								<li>e.g. Canadian Census</li>
+							</ul>
+							<li><p>Restricted Data</p></li>
+							<ul>
+								<li>e.g. Historical Business Data (Data Axle)</li>
+								<li>e.g. Environics Analytics Data</li>
+							</ul>			
+						</ul>
+					</section>
+
+					<section>
+						<p>Canadian Census (Statistics Canada)</p>
+						<p style="font-size:20px;">- many variables on demographics, socio-economic status, etc.<p>
+						<p style="font-size:20px;">- summary data at different levels of geography<p>
+						<p style="font-size:20px;">- check out <a href="https://censusmapper.ca">CensusMapper</a> to view and download data</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/pop-density.png">
+					</section>
+					
+					<section>
+						<p>Open Data Toronto </p>
+						<p style="font-size:20px;"><a href="https://open.toronto.ca/">https://open.toronto.ca/</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/toronto-open-data.png">
+					</section>
+
+					<section>
+						<p>Data Axle</p>
+						<p style="font-size:20px;"><a href="https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/IPKREG">Historic Business Data (annually 2009 to 2021)</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/data-axle-table.png">
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h4>Geoprocessing</h4>
+						<ul style="font-size:28px; width: 500px">
+							<li>Converting from one data format to another</li>
+							<li>Combining two or more datasets to create new data, based on their spatial location</li>
+						</ul>
+						<p>
+						<img width=300px src="https://jamaps.github.io/notes/2019/intro_to_QGIS/html/img_layers.png"></p>
+					</section>
+
+					<section>
+						<p>Geocoding</p>
+						<p>
+							<ul style="font-size:20px;">
+								<li>Taking an address string a finding its XY coordinates to plot on a map</li>
+								<li>From "55 St. George Street, Toronto, ON M5S 0C9" to <code>[-79.3966, 43.6607]</code></li>
+								<li>Can be scaled for 1000s of addresses (e.g. below are Data Axle business data geocoded)</li>
+							</ul>
+						</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/business-geocode.png">
+					</section>
+
+					<section>
+						<p>Buffers</p>
+						<p>
+							<ul style="font-size:20px;">
+								<li>Generates polygons around input features to a specified distance.</li>
+								<li>e.g. 1km buffers around public libraries in Toronto</li>
+							</ul>
+						</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/buffer-libraries.png">
+					</section>
+
+					<section>
+						<p>Spatial Joins</p>
+						<p>
+							<ul style="font-size:20px;">
+								<li>Joining data between layers based on their spatial location</li>
+								<li>e.g. counting the number of CafeTO segments by BIA</li>
+							</ul>
+						</p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/spatial-join.png">
+					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h4>Spatial Analysis // Urban Data Science</h4>
+						<p style="font-size:27px;">Techniques for understanding the how and why of where</p>
+						<ul style="font-size:22px;">
+							<li>Visualization (describing patterns with maps, graphs, etc.)</li>
+							<li>Descriptive Statistics (summarizing data, can be  spatial or non-spatial)</li>
+							<li>Clustering (grouping of similar objects into sets)</li>
+							<li>Classification (identifying which category an object belongs to)</li>
+							<li>Modelling (understanding relationships between variables / predicting outcomes)</li>
+						</ul>
+						<p>
+					</section>
+
+					<section data-background-image="https://raw.githubusercontent.com/schoolofcities/parking-tickets-toronto/main/map/parking-tickets-toronto.png">
+					</section>
+
+					<section>
+						<p style="font-size:22px;">e.g. Neighbourhood clustering / geodemographics in Great Britain</p>
+						<p style="font-size:22px;"><a href="https://mapmaker.cdrc.ac.uk">https://mapmaker.cdrc.ac.uk</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/cluster-london.png">
+					</section>
+
+					<section>
+						<p style="font-size:22px;">e.g. what's correlated with downtown recovery?</p>
+						<p style="font-size:22px;"><a href="http://downtownrecovery.com">http://downtownrecovery.com</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/downtown-recovery.png">
+					</section>
+
+				</section>
+			
+				<section>
+					<section>
+						<p>Other Tools | Zoetrope</p>
+						<ul style="font-size:22px;">
+							<li style="font-size:22px; text-align: left;"><a href="https://zoetrope.pythonanywhere.com/">https://zoetrope.pythonanywhere.com</a></li>
+							<li style="font-size:22px; text-align: left; ">A tool to facilitate the collection, analysis, and processing of Google Street View images across time and geographies</li>
+							<li style="font-size:22px; text-align: left;">Feel free to <a href="https://us02web.zoom.us/meeting/register/tZ0pcuytqzwvGdOJ4vSUE8qHQ3nN1smeqDjW?mc_cid=010b618c63&mc_eid=3f0c74fd96">join a demo</a> on January 19 at 11 AM ET to learn about the tool from creators Shayan Ghosh and Moulay-Zaidane Draidia.</li>
+						</ul>
+						
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/zoetrope-compare.png">
+					</section>
+					<section>
+						<p>Other Tools | Streetmix</p>
+						<p style="font-size:22px;"><a href="https://streetmix.net">https://streetmix.net</a></p>
+						<p style="font-size:22px;">Tool for designing street sections</p>
+						<img src="https://raw.githubusercontent.com/streetmix/streetmix/main/docs/static/screenshot.png">
+					</section>
+				</section>
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				width: 960,
+  				height: 700,
+				margin: 0.04,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
