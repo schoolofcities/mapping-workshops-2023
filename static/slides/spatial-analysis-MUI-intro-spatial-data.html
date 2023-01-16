@@ -19,7 +19,8 @@
 			<div class="slides">
 
 				<section>
-					<h3>Introduction to Spatial Data</h3>
+					<h3>Introduction to Spatial Analysis</h3>
+					<p style="font-size:28px;">using data to analyze the how and why of where</p>
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
 					<img width=100px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
@@ -28,23 +29,23 @@
 
 				<section>
 					<section>
-						<h3>Spatial Data</h3>
+						<h4>Spatial Data</h4>
 						attribute data (the <strong>what</strong>)</li> + location data (the <strong>where</strong>)</li>
 					</section>
+
 					<section>
 						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic_table.png"> &nbsp;
 						<img height=300px src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_olympic.png">
 					</section>
-				</section>
 
-				<section>
 					<section>
-						<h3>Vector Data</h3>
+						<h4>Vector Data</h4>
 						<p>Representing features as <b><u>points</u></b>, <b><u>lines</u></b>, or <b><u>polygons</u></b> </p>
 						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/c/c2/SFA_Point.svg">
 						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/b/b9/SFA_LineString.svg">
 						<img width=200px src="https://upload.wikimedia.org/wikipedia/commons/3/3f/SFA_Polygon.svg">
 					</section>
+
 					<section>
 						<p style="font-size:21px;">
 							Vector data is encoded as a series of X,Y (e.g. longitude, latitude) coordinates
@@ -72,12 +73,9 @@
 						<p style="font-size:25px; color:white; text-align: left;">e.g. aggregated flow data</p>
 						<p style="font-size:20px; color:white; text-align: left;">- <a href="https://flowmap.blue/">https://flowmap.blue/</a></p>
 					</section>
-					
-				</section>
-
-				<section>
+			
 					<section>
-						<h3>Raster Data</h3>
+						<h4>Raster Data</h4>
 						<p>Represents space as a continuous grid, with each cell having a value</p>
 						<img src="https://schoolofcities.github.io/intro-GIS-workshop-2022/html/img_raster_ex.png">
 						<p style="font-size:13px;">
@@ -91,19 +89,16 @@
 						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/aerial-imagery.png">
 
 					</section>
-				</section>
-
-				<section>
 
 					<section>
-						<h3>Data Licenses & Use Agreements</h3>
+						<h4>Data Licenses & Use Agreements</h4>
 						<ul>
-							<li><h4>Open Data</h4></li>
+							<li><p>Open Data</p></li>
 							<ul>
 								<li>e.g. City of Toronto Open Data</li>
 								<li>e.g. Canadian Census</li>
 							</ul>
-							<li><h4>Restricted Data</h4></li>
+							<li><p>Restricted Data</p></li>
 							<ul>
 								<li>e.g. Historical Business Data (Data Axle)</li>
 								<li>e.g. Environics Analytics Data</li>
@@ -136,8 +131,8 @@
 				<section>
 
 					<section>
-						<h3>Geoprocessing</h3>
-						<ul style="font-size:28px;">
+						<h4>Geoprocessing</h4>
+						<ul style="font-size:28px; width: 500px">
 							<li>Converting from one data format to another</li>
 							<li>Combining two or more datasets to create new data, based on their spatial location</li>
 						</ul>
@@ -146,9 +141,9 @@
 					</section>
 
 					<section>
-						<h3>Geocoding</h3>
+						<p>Geocoding</p>
 						<p>
-							<ul style="font-size:22px;">
+							<ul style="font-size:20px;">
 								<li>Taking an address string a finding its XY coordinates to plot on a map</li>
 								<li>From "55 St. George Street, Toronto, ON M5S 0C9" to <code>[-79.3966, 43.6607]</code></li>
 								<li>Can be scaled for 1000s of addresses (e.g. below are Data Axle business data geocoded)</li>
@@ -158,9 +153,9 @@
 					</section>
 
 					<section>
-						<h3>Buffers</h3>
+						<p>Buffers</p>
 						<p>
-							<ul style="font-size:22px;">
+							<ul style="font-size:20px;">
 								<li>Generates polygons around input features to a specified distance.</li>
 								<li>e.g. 1km buffers around public libraries in Toronto</li>
 							</ul>
@@ -169,15 +164,47 @@
 					</section>
 
 					<section>
-						<h3>Spatial Joins</h3>
+						<p>Spatial Joins</p>
 						<p>
-							<ul style="font-size:22px;">
+							<ul style="font-size:20px;">
 								<li>Joining data between layers based on their spatial location</li>
 								<li>e.g. counting the number of CafeTO segments by BIA</li>
 							</ul>
 						</p>
 						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/spatial-join.png">
 					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h4>Spatial Analysis // Urban Data Science</h4>
+						<p style="font-size:27px;">Techniques for understanding the how and why of where</p>
+						<ul style="font-size:22px;">
+							<li>Visualization (describing patterns with maps, graphs, etc.)</li>
+							<li>Descriptive Statistics (summarizing data, can be  spatial or non-spatial)</li>
+							<li>Clustering (grouping of similar objects into sets)</li>
+							<li>Classification (identifying which category an object belongs to)</li>
+							<li>Modelling (understanding relationships between variables / predicting outcomes)</li>
+						</ul>
+						<p>
+					</section>
+
+					<section data-background-image="https://raw.githubusercontent.com/schoolofcities/parking-tickets-toronto/main/map/parking-tickets-toronto.png">
+					</section>
+
+					<section>
+						<p style="font-size:22px;">e.g. Neighbourhood clustering / geodemographics in Great Britain</p>
+						<p style="font-size:22px;"><a href="https://mapmaker.cdrc.ac.uk">https://mapmaker.cdrc.ac.uk</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/cluster-london.png">
+					</section>
+
+					<section>
+						<p style="font-size:22px;">e.g. what's correlated with downtown recovery?</p>
+						<p style="font-size:22px;"><a href="http://downtownrecovery.com">http://downtownrecovery.com</a></p>
+						<img src="imgs/spatial-analysis-MUI-intro-spatial-data/downtown-recovery.png">
+					</section>
+
 				</section>
 			
 				<section>
@@ -214,7 +241,9 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				width: 960,
+  				height: 700,
+				margin: 0.04,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
