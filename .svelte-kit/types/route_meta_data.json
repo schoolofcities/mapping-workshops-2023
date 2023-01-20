@@ -9,5 +9,9 @@
 	"/spatial-analysis-MUI2000/intro-spatial-data": [
 		"src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/spatial-analysis-MUI2000/GIS-workshop": [
+		"src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.js",
+		"src/routes/+layout.js"
 	]
 }

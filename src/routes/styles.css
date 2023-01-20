@@ -4,16 +4,13 @@
 }
 :root {
     font-family: Roboto, sans-serif;
-    --brandDarkBlue: #1470ad;
-    --brandLightBlue: #8EB6DC;
-    --brandRed: #ab1269; 
-    --brandYellow: #F1C500;
+    --brandDarkBlue: #1E3765;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 main {
@@ -22,4 +19,20 @@ main {
     min-width: 320px;
     max-width: 1920px;
     position: relative;
+}
+
+p {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+}
+
+#title {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+#title h2 {
+    font-family: 'TradeGothicBold', serif;
+    font-size: 42px;
 }

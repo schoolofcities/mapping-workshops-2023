@@ -24,23 +24,9 @@
 	/>
 
 
-    <!-- <title>Place and Politics in Toronto</title>
-    <meta name="description" content="Place and Politics in Toronto">
-    <meta name="author" content="Zack Taylor & Jeff Allen">
-
-	<meta property="og:title" content="Place and Politics in Toronto" />
-    <meta name="og:description" content="Mapping Toryland and Ford Nation" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://schoolofcities.github.io/place-and-politics-toronto/torontos-two-rights" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/sveltekit/src/routes/assets/web-card-2.png" />
-    <meta property="og:locale" content="en_CA">
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="https://schoolofcities.github.io/place-and-politics-toronto/torontos-two-rights" />
-    <meta name="twitter:creator" content="@JeffAllenMaps" />
-    <meta name="twitter:title" content="Place and Politics in Toronto" />
-    <meta name="twitter:description" content="Mapping Toryland and Ford Nation" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/sveltekit/src/routes/assets/web-card-2.png" /> -->
+    <title>Spatial Analysis & GIS - MUI2000</title>
+    <meta name="description" content="Intro to spatial analysis and a GIS workshop for MUI2000">
+    <meta name="author" content="Jeff Allen">
 
 </svelte:head>
 
@@ -50,28 +36,9 @@
 
 <main>
 
-	<div id="page">
-        <iframe class="slides" src="/mapping-workshops-2023/slides/index.html"/>
-    </div>
-
 </main>
 
 
 <style>
-
-
-    #page {
-        background-color: red;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .slides {
-        border: none;
-        /* padding: 0px; */
-        /* margin: -10px; */
-        width: 100vw;
-        height: 100vh;
-    }
 
 </style>
