@@ -1,65 +1,126 @@
 {
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png": {
+    "file": "_app/immutable/assets/dem-toronto-c547fdc3.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png": {
+    "file": "_app/immutable/assets/qgis-blank-c49863c8.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png": {
+    "file": "_app/immutable/assets/osm-college-bf243ca2.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png": {
+    "file": "_app/immutable/assets/qgis-railct-8ad297f5.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/gis-layers.png": {
+    "file": "_app/immutable/assets/gis-layers-479f3a99.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/gis-layers.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-choropleth.png": {
+    "file": "_app/immutable/assets/qgis-choropleth-81a06853.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-choropleth.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-centre.png": {
+    "file": "_app/immutable/assets/qgis-centre-db6f5d95.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-centre.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bikeshare.png": {
+    "file": "_app/immutable/assets/qgis-bikeshare-2fd27b69.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bikeshare.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-layers1.png": {
+    "file": "_app/immutable/assets/qgis-layers1-2075521d.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-layers1.png"
+  },
   "src/routes/assets/top-logo.svg": {
     "file": "_app/immutable/assets/top-logo-ed729436.svg",
     "src": "src/routes/assets/top-logo.svg"
   },
+  "src/routes/assets/Trade Gothic LT Bold.ttf": {
+    "file": "_app/immutable/assets/Trade Gothic LT Bold-d851713b.ttf",
+    "src": "src/routes/assets/Trade Gothic LT Bold.ttf"
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-0bf3f1ee.js",
+    "file": "_app/immutable/start-1862eb52.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-3c40d2d2.js",
-      "_singletons-16fdab0b.js"
+      "_index-a8a08db8.js",
+      "_singletons-ac6f478c.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
       ".svelte-kit/generated/nodes/1.js",
       ".svelte-kit/generated/nodes/2.js",
-      ".svelte-kit/generated/nodes/3.js"
+      ".svelte-kit/generated/nodes/3.js",
+      ".svelte-kit/generated/nodes/4.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-68a2bd3c.js",
+    "file": "_app/immutable/components/layout.svelte-0a25e0ff.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-3c40d2d2.js"
+      "_index-a8a08db8.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-ccc29c5d.js",
+    "file": "_app/immutable/components/error.svelte-353c522b.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-3c40d2d2.js",
-      "_singletons-16fdab0b.js"
+      "_index-a8a08db8.js",
+      "_singletons-ac6f478c.js"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/+page.svelte": {
-    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/_page.svelte-58dc1460.js",
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/_page.svelte-e3256a1d.js",
     "src": "src/routes/spatial-analysis-MUI2000/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-3c40d2d2.js"
+      "_index-a8a08db8.js",
+      "_TopSofC-31e5beff.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-f84c9be5.css",
-      "_app/immutable/assets/styles-4b431f91.css"
+      "_app/immutable/assets/styles-f36e34f2.css"
+    ]
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte": {
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/GIS-workshop/_page.svelte-0dc76f65.js",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-a8a08db8.js",
+      "_TopSofC-31e5beff.js"
+    ],
+    "css": [
+      "_app/immutable/assets/styles-f36e34f2.css"
     ],
     "assets": [
-      "_app/immutable/assets/top-logo-ed729436.svg"
+      "_app/immutable/assets/osm-college-bf243ca2.png",
+      "_app/immutable/assets/dem-toronto-c547fdc3.png",
+      "_app/immutable/assets/gis-layers-479f3a99.png",
+      "_app/immutable/assets/qgis-blank-c49863c8.png",
+      "_app/immutable/assets/qgis-layers1-2075521d.png",
+      "_app/immutable/assets/qgis-centre-db6f5d95.png",
+      "_app/immutable/assets/qgis-bikeshare-2fd27b69.png",
+      "_app/immutable/assets/qgis-railct-8ad297f5.png",
+      "_app/immutable/assets/qgis-choropleth-81a06853.png"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte": {
-    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/intro-spatial-data/_page.svelte-2f96deae.js",
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/intro-spatial-data/_page.svelte-4dfdcbde.js",
     "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-3c40d2d2.js"
+      "_index-a8a08db8.js"
     ],
     "css": [
       "_app/immutable/assets/_page-250bdaba.css",
-      "_app/immutable/assets/styles-4b431f91.css"
+      "_app/immutable/assets/styles-f36e34f2.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -78,6 +139,14 @@
       "__page-49c99631.js"
     ]
   },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.js": {
+    "file": "_app/immutable/modules/pages/spatial-analysis-MUI2000/GIS-workshop/_page.js-448a0d11.js",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.js",
+    "isEntry": true,
+    "imports": [
+      "__page-7d1d4778.js"
+    ]
+  },
   "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js": {
     "file": "_app/immutable/modules/pages/spatial-analysis-MUI2000/intro-spatial-data/_page.js-fb7df706.js",
     "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.js",
@@ -86,26 +155,41 @@
       "__page-32babd19.js"
     ]
   },
-  "_singletons-16fdab0b.js": {
-    "file": "_app/immutable/chunks/singletons-16fdab0b.js",
+  "_singletons-ac6f478c.js": {
+    "file": "_app/immutable/chunks/singletons-ac6f478c.js",
     "imports": [
-      "_index-3c40d2d2.js"
+      "_index-a8a08db8.js"
     ]
   },
-  "_index-3c40d2d2.js": {
-    "file": "_app/immutable/chunks/index-3c40d2d2.js"
+  "_index-a8a08db8.js": {
+    "file": "_app/immutable/chunks/index-a8a08db8.js"
   },
   "__layout-c2780a85.js": {
     "file": "_app/immutable/chunks/_layout-c2780a85.js"
   },
+  "_TopSofC-31e5beff.js": {
+    "file": "_app/immutable/chunks/TopSofC-31e5beff.js",
+    "imports": [
+      "_index-a8a08db8.js"
+    ],
+    "css": [
+      "_app/immutable/assets/TopSofC-4f9d6b8c.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/top-logo-ed729436.svg"
+    ]
+  },
   "__page-49c99631.js": {
     "file": "_app/immutable/chunks/_page-49c99631.js"
+  },
+  "__page-7d1d4778.js": {
+    "file": "_app/immutable/chunks/_page-7d1d4778.js"
   },
   "__page-32babd19.js": {
     "file": "_app/immutable/chunks/_page-32babd19.js"
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-bf69d724.js",
+    "file": "_app/immutable/chunks/0-20f8f3a1.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
@@ -114,7 +198,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-6f82a151.js",
+    "file": "_app/immutable/chunks/1-bcdd20eb.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -122,7 +206,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-088e15a5.js",
+    "file": "_app/immutable/chunks/2-b9cdc8a2.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -131,24 +215,33 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-2271d8f1.js",
+    "file": "_app/immutable/chunks/3-6d6b2dbe.js",
     "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-7d1d4778.js",
+      "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-7c349f23.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
       "__page-32babd19.js",
       "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte"
     ]
   },
-  "src/routes/spatial-analysis-MUI2000/+page.css": {
-    "file": "_app/immutable/assets/_page-f84c9be5.css",
-    "src": "src/routes/spatial-analysis-MUI2000/+page.css"
+  "TopSofC.css": {
+    "file": "_app/immutable/assets/TopSofC-4f9d6b8c.css",
+    "src": "TopSofC.css"
   },
   "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css": {
     "file": "_app/immutable/assets/_page-250bdaba.css",
     "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css"
   },
   "styles.css": {
-    "file": "_app/immutable/assets/styles-4b431f91.css",
+    "file": "_app/immutable/assets/styles-f36e34f2.css",
     "src": "styles.css"
   }
 }
