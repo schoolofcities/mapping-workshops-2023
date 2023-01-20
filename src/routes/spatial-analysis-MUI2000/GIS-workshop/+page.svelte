@@ -3,11 +3,13 @@
 	import Top from "../../lib/TopSofC.svelte";
 	import '../../styles.css';
 
-    import imgOsmCollege from './assets/osm-college.png'
-    import imgDemToronto from './assets/dem-toronto.png'
-    import imgGisLayers from './assets/gis-layers.png'
-    import imgQgisBlank from './assets/qgis-blank.png'
-    import imgQgisLayers1 from './assets/qgis-layers1.png'
+    import imgOsmCollege from './assets/osm-college.png';
+    import imgDemToronto from './assets/dem-toronto.png';
+    import imgGisLayers from './assets/gis-layers.png';
+    import imgQgisBlank from './assets/qgis-blank.png';
+    import imgQgisLayers1 from './assets/qgis-layers1.png';
+    import imgQgisCentre from './assets/qgis-centre.png';
+    import imgQgisBikeshare from './assets/qgis-bikeshare.png';
 
 </script>
 
@@ -144,40 +146,53 @@
 
         <h2>Tutorial (1)</h2>
 
-        <h3>Loading & Visualizing Data</h3>
+        <h3>Loading, Querying, and Visualizing Data</h3>
 
         <p>
-            First open up QGIS with a blank project. The top bars are various functions/tools. The "browser" allows for navigating and loading datasets. The "layer" panel will include each dataset that is added to the map. And the big blank square is where your map data will be visualized.
+            First open up QGIS with a blank project. The top bars are various functions/tools. The "Browser" allows for navigating and loading datasets. The "Layers" panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
         </p>
         <img src={imgQgisBlank} alt="qgis-blank">
         <p>
             Let's begin by grabbing data from the City of Toronto's Open Data portal and loading it into QGIS. This is the data we'll be looking at:
         </p>
         <ul>
-            <li><a href="https://open.toronto.ca/dataset/business-improvement-areas/">Business Improvement Areas (BIAs)</a></li>
-            <li><a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Street Centrelines</a></li>
+            <li><a href="https://open.toronto.ca/dataset/business-improvement-areas/">Business Improvement Areas (BIA)</a>.</li>
+            <li><a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Street Centrelines</a>.</li>
             <li><a href="https://open.toronto.ca/dataset/bike-share-toronto/">Bike Share Stations</a>. This data are a "live" <code>json</code> feed, I've scraped it with this <a href="">script</a>, the result can be downloaded from <a href="">here</a>.</li>
             <li><a href="https://open.toronto.ca/dataset/web-map-services/">Aerial Imagery</a>. We'll be adding the most recent imagery layer.</li>
         </ul>
         <p>
-            Let's start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City's server. It can be loaded into QGIS by right-clicking on "WMS/WMTS" layer in the browser and adding a "New Connection" or by going to Layer->Data Source Manager and navigating to "WMS/WMTS". Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer.
+            Let's start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City's server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer->Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer.
         </p>
         <p>
-            Now let's add BIA and Centreline data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by Layer->Data Source Manager and navigating to "Vector".
+            Now let's add BIA and Centreline data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer->Data Source Manager</i> and navigating to <i>Vector"</i>.
         </p>
         <p>
             Once added, your map should look something like this:
         </p>
         <img src={imgQgisLayers1} alt="qgis-layers1">
         <p>
-            The layers can be toggled on and off. They can also be dragged into different orders, the top layer on the panel will always be the layer that is shown on top on the map. 
+            The layers can be toggled on and off. They can also be dragged into different orders, the top layer on the panel will always be the layer that is shown on top on the map. Right-clicking on the layer, going to <i>Properties</i>, then <i>Symbology</i>. In the image above, I changed the colours of the two vector layers, as well as the stroke-width of the Centreline layer.
         </p>
+        <p> 
+            Let's explore how we can select and filter data. We'll use the Centreline layer as an example. Right-clicking they layer allows us to view it's attribute table. There is a column in here called <code>FEATURE_00</code> which indicates the type of feature. Right-click and open up the <i>Properties</i> of the layer, then click <i>Source</i>, and play with filtering the data. e.g. this is a query for filtering to only show laneways <code>"FEATURE_00" = 'Laneway'</code>
+        </p>
+        <p>
+            We can also visualize data based on values in the attribute table. In the CentreLine <i>Properties</i>, go to <i>Symbology</i>, then at the top, select <i>Categorized</i>. Try selecting <i>FEATURE_00</i> again. We can now quickly visualize where different features are on the map! Each category can also be turned off and on in the layers panel as well.
+        </p>
+        <img src={imgQgisCentre} alt="qgis-centre">
+        <p>
+            Now let's learn how to visualize data based on numeric data. We can use the bike share station data for this. Download and load this dataset into QGIS. Then go to it's <i>Properties</i>, <i>Symbology</i>, then at the top, select <i>Graduated</i>. In this menu, we can color the points based on a numeric value in a column. Let's colour by the <code>capacity</code> column. There are lot's of options for colour ramps and how to categorize the data. The layer panel should also supdate with a mini-legend showing how the data are being visualized.
+        </p>
+        <img src={imgQgisBikeshare} alt="qgis-bikeshare">
         
+    </div>
 
+    <div id="text">
 
+        <h2>Tutorial (2)</h2>
 
-
-        
+        <h3>Table Joins and Choropleths</h3>
 
     </div>
 

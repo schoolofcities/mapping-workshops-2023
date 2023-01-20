@@ -8,6 +8,7 @@
     --brandMedBlue: #007FA3;
     --brandLightBlue: #6FC7EA;
     --brandRed: #DC4633;
+    --brandYellow: #F1C500;
 }
 
 body {
@@ -69,7 +70,11 @@ code {
     font-size: 14px;
     background-color: var(--brandLightBlue);
     padding: 3px;
-    
+}
+
+i {
+    background-color: var(--brandYellow);
+    padding: 2px;
 }
 
 
@@ -81,7 +86,6 @@ code {
     border-bottom: solid 1px black;
     padding: 30px;
     text-align: center;
-    background-color: var(--brandLightBlue);
 }
 
 #text {
