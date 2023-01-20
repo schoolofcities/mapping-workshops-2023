@@ -46,8 +46,8 @@
 
     <div id="text">
 
-        <p>Introduction to spatial analysis | <a href="./intro-spatial-data">slides</a></p>
-        <p>GIS Workshop | <a href="./GIS-workshop">instructions & data</a></p>
+        <p>Introduction to spatial analysis | <a href="./spatial-analysis-MUI2000/intro-spatial-data">slides</a></p>
+        <p>GIS Workshop | <a href="./spatial-analysis-MUI2000/GIS-workshop">instructions & data</a></p>
 
     </div>
 
