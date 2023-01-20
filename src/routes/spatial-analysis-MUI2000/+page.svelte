@@ -36,6 +36,21 @@
 
 <main>
 
+    <div id="title">
+
+        <p><i>GIS and Spatial Analysis Teaching Material for MUI2000</i></p>
+
+        <p>Jeff Allen | January 2023</p>
+
+    </div>
+
+    <div id="text">
+
+        <p>Introduction to spatial analysis | <a href="./intro-spatial-data">slides</a></p>
+        <p>GIS Workshop | <a href="./GIS-workshop">instructions & data</a></p>
+
+    </div>
+
 </main>
 
 
