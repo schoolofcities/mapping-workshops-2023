@@ -10,6 +10,8 @@
     import imgQgisLayers1 from './assets/qgis-layers1.png';
     import imgQgisCentre from './assets/qgis-centre.png';
     import imgQgisBikeshare from './assets/qgis-bikeshare.png';
+    import imgQgisRailct from './assets/qgis-railct.png';
+    import imgQgisChoropleth from './assets/qgis-choropleth.png'
 
 </script>
 
@@ -65,7 +67,7 @@
             <li>perform spatial analysis (i.e. statistical methods applied to spatial data)</li>
             </ul>
         <p>GIS is often thought of as more than just a tool or piece of software. It can refer to all aspects of managing and analyzing digital spatially referenced data.</p>
-        <p>The following provides a brief overview of GIS followed by two short tutorials for getting started with GIS, using <a href="https://www.qgis.org/en/site/">QGIS</a>, a free and open source desktop GIS software. The first tutorial uses data from QQQQQQQQ. The second analyzes demographic data from the Canadian census as well as public transit data for Toronto.</p>
+        <p>The following provides a brief overview of GIS followed by two short tutorials for getting started with GIS, using <a href="https://www.qgis.org/en/site/">QGIS</a>, a free and open source desktop GIS software. The first tutorial uses data from the City of Toronto's Open Data portal. The second analyzes demographic data from the Canadian census as well as public transit data for Toronto</p>
 
     </div>
 
@@ -92,7 +94,7 @@
 
         <p>Vector data uses geographic coordinates, or a series of coordinates, to create points, lines, and polygons representing real-world features.</p>
 
-        <p>e.g. in the map below, a screenshot of <a href="https://www.openstreetmap.org/">OpenStreetMap</a>, lines are used to represent roads and rail, points for retail, polygons for parks and buildings, etc. </p>
+        <p>e.g. in the map below (a screenshot of <a href="https://www.openstreetmap.org/">OpenStreetMap</a>) lines are used to represent roads and rail, points for retail, polygons for parks and buildings, etc. </p>
 
         <img src={imgOsmCollege} alt="OpenStreetMap">
 
@@ -182,7 +184,7 @@
         </p>
         <img src={imgQgisCentre} alt="qgis-centre">
         <p>
-            Now let's learn how to visualize data based on numeric data. We can use the bike share station data for this. Download and load this dataset into QGIS. Then go to it's <i>Properties</i>, <i>Symbology</i>, then at the top, select <i>Graduated</i>. In this menu, we can color the points based on a numeric value in a column. Let's colour by the <code>capacity</code> column. There are lot's of options for colour ramps and how to categorize the data. The layer panel should also supdate with a mini-legend showing how the data are being visualized.
+            Now let's learn how to visualize data based on numeric data. We can use the bike share station data for this. Download and load this dataset into QGIS. Then go to it's <i>Properties</i>, <i>Symbology</i>, then at the top, select <i>Graduated</i>. In this menu, we can color the points based on a numeric value in a column. Let's colour by the <code>capacity</code> column. Notice the options available for classifying data (number of bins, whether to use quantiles or equal intervals, etc.). Different classification schemes can highlight or hide different spatial patterns.
         </p>
         <img src={imgQgisBikeshare} alt="qgis-bikeshare">
         
@@ -194,6 +196,24 @@
 
         <h3>Table Joins and Choropleths</h3>
 
+        <p>Start up a new QGIS project and add in the data downloaded from <a href="https://github.com/schoolofcities/intro-GIS-workshop-2022/blob/main/toronto.zip">here</a>.</p>
+
+        <p>First, let's look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21">here</a>, while attribute data were downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm">here</a>.</p>
+
+        <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction.</p>
+
+        <img src={imgQgisRailct} alt="qgis-railct">
+
+        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the dissemination area boundary, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
+
+        <p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth map</a> (maps where polygons are shaded by numeruc attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It's often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
+
+        <p>(Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).</p>
+
+        <p>For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood relative to major transit lines.</p>
+
+        <img src={imgQgisChoropleth} alt="qgis-choropleth">
+        
     </div>
 
 
