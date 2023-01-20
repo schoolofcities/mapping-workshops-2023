@@ -24,9 +24,24 @@ main {
     position: relative;
 }
 
+h1 {
+    font-family: TradeGothicBold, serif;
+    font-size: 42px;
+}
+
+h2 {
+    font-family: TradeGothicBold, serif;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: TradeGothicBold, serif;
+    font-size: 25px;
+}
+
 p {
     font-family: 'Source Serif Pro', serif;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 ul {
@@ -36,13 +51,27 @@ ul {
 
 a {
     color: var(--brandMedBlue);
-    text-decoration: none;
-    font-weight: bold;
+    text-decoration: underline;
+    /* font-weight: bold; */
 }
 a:hover {
     color: var(--brandRed);
-    font-weight: bold;
+    /* font-weight: bold; */
 }
+
+img {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+}
+
+code {
+    font-size: 14px;
+    background-color: var(--brandLightBlue);
+    padding: 3px;
+    
+}
+
 
 #title {
     margin: 0 auto;
@@ -53,11 +82,6 @@ a:hover {
     padding: 30px;
     text-align: center;
     background-color: var(--brandLightBlue);
-}
-
-#title h2 {
-    font-family: TradeGothicBold, serif;
-    font-size: 42px;
 }
 
 #text {
