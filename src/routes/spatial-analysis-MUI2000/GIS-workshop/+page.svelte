@@ -196,7 +196,7 @@
 
         <h3>Table Joins and Choropleths</h3>
 
-        <p>Start up a new QGIS project and add in the data downloaded from <a href="https://github.com/schoolofcities/intro-GIS-workshop-2022/blob/main/toronto.zip">here</a>.</p>
+        <p>Start up a new QGIS project and add in the data downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip">here</a>.</p>
 
         <p>First, let's look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21">here</a>, while attribute data were downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm">here</a>.</p>
 
@@ -216,12 +216,11 @@
         
     </div>
 
-
-    
-
 </main>
 
 
 <style>
+
+/* all coming from style css */
 
 </style>
