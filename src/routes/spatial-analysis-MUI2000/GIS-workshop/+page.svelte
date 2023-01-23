@@ -132,7 +132,7 @@
             <li>D3 (free, steeper learning curve)</li>
             <li>Observable (free, steeper learning curve)</li>
         </ul>
-        <p>Data management &amp; processing of spatial data</p>
+        <p>GIS & Spatial analysis using code</p>
         <ul class="list">
             <li>Python, R (for processing data, statistical analysis, making simple maps)</li>
             <li>PostGIS (spatial databases and queries)</li>
@@ -157,7 +157,7 @@
         <ul>
             <li><a href="https://open.toronto.ca/dataset/business-improvement-areas/">Business Improvement Areas (BIA)</a>.</li>
             <li><a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Street Centrelines</a>.</li>
-            <li><a href="https://open.toronto.ca/dataset/bike-share-toronto/">Bike Share Stations</a>. This data are a "live" <code>json</code> feed, I've scraped it with this <a href="">script</a>, the result can be downloaded from <a href="">here</a>.</li>
+            <li><a href="https://open.toronto.ca/dataset/bike-share-toronto/">Bike Share Stations</a>. This data are a "live" <code>json</code> feed, I've scraped it with this <a href="https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py">script</a>, the result can be downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/bikeshare-stations.geojson">here</a>.</li>
             <li><a href="https://open.toronto.ca/dataset/web-map-services/">Aerial Imagery</a>. We'll be adding the most recent imagery layer.</li>
         </ul>
         <p>
