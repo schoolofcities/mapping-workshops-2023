@@ -9,6 +9,8 @@ const imgQgisCentre = "/mapping-workshops-2023/_app/immutable/assets/qgis-centre
 const imgQgisBikeshare = "/mapping-workshops-2023/_app/immutable/assets/qgis-bikeshare-2fd27b69.png";
 const imgQgisRailct = "/mapping-workshops-2023/_app/immutable/assets/qgis-railct-8ad297f5.png";
 const imgQgisChoropleth = "/mapping-workshops-2023/_app/immutable/assets/qgis-choropleth-81a06853.png";
+const imgQgisBuffer = "/mapping-workshops-2023/_app/immutable/assets/qgis-buffer-9fdd946a.png";
+const imgQgisBufferSelect = "/mapping-workshops-2023/_app/immutable/assets/qgis-bufferselect-b78dff64.png";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1xs4wlw_START --><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin><link href="${"https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"}" rel="${"stylesheet"}"><link href="${"https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"}" rel="${"stylesheet"}"><meta name="${"viewport"}" content="${"width=device-width, initial-scale=1, minimum-scale=1"}">${$$result.title = `<title>GIS Workshop / MUI2000</title>`, ""}<meta name="${"description"}" content="${"GIS workshop for MUI2000"}"><meta name="${"author"}" content="${"Jeff Allen"}"><!-- HEAD_svelte-1xs4wlw_END -->`, ""}
 
@@ -18,9 +20,11 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
 <main><div id="${"title"}"><h1>(Q)GIS WORKSHOP</h1>
 
-        <p>Jeff Allen</p>
+        <p>For MUI2000</p>
 
-        <p>January 23 &amp; 30, 2023</p></div>
+        <p>By Jeff Allen</p>
+
+        <p>On January 23 &amp; 30, 2023</p></div>
 
     <div id="${"text"}"><p>We use Geographic Information Systems (GIS) to analyze, manipulate, and visualize spatial information on a computer.</p>
         
@@ -43,7 +47,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <ul class="${"list"}"><li>attribute data (the what)</li>
             <li>location data and spatial dimensions (the where)</li></ul>
 
-        <p>Spatial data, this combination of attribute and location data, can be organized and represented in a number of different formts.</p>
+        <p>Spatial data, this combination of attribute and location data, can be organized and represented in a number of different formats.</p>
 
         <p>For example, a city can be represented on a map via a single point with a label (e.g. based on latitude and longitude coordinates). Or a city can be represented as a polygon, based on on it&#39;s administrative boundary</p>
 
@@ -88,7 +92,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
             <li>ArcGIS Online (commercial)</li>
             <li>D3 (free, steeper learning curve)</li>
             <li>Observable (free, steeper learning curve)</li></ul>
-        <p>Data management &amp; processing of spatial data</p>
+        <p>GIS &amp; Spatial analysis using code</p>
         <ul class="${"list"}"><li>Python, R (for processing data, statistical analysis, making simple maps)</li>
             <li>PostGIS (spatial databases and queries)</li></ul>
         <p>Many more!</p></div>
@@ -104,7 +108,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         </p>
         <ul><li><a href="${"https://open.toronto.ca/dataset/business-improvement-areas/"}">Business Improvement Areas (BIA)</a>.</li>
             <li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}">Street Centrelines</a>.</li>
-            <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${""}">script</a>, the result can be downloaded from <a href="${""}">here</a>.</li>
+            <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py"}">script</a>, the result can be downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/bikeshare-stations.geojson"}">here</a>.</li>
             <li><a href="${"https://open.toronto.ca/dataset/web-map-services/"}">Aerial Imagery</a>. We&#39;ll be adding the most recent imagery layer.</li></ul>
         <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer-&gt;Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer.
         </p>
@@ -131,19 +135,65 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>First, let&#39;s look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21"}">here</a>, while attribute data were downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm"}">here</a>.</p>
 
-        <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction.</p>
+        <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction. The screenshot below shows the result. (Also note how the map has been rotated 17.7 degrees, to horizontally align some of the features and reduce empty white space).</p>
 
         <img${add_attribute("src", imgQgisRailct, 0)} alt="${"qgis-railct"}">
 
         <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the dissemination area boundary, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
-        <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}">choropleth map</a> (maps where polygons are shaded by numeruc attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
+        <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 
         <p>(Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).</p>
 
         <p>For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood relative to major transit lines.</p>
 
-        <img${add_attribute("src", imgQgisChoropleth, 0)} alt="${"qgis-choropleth"}"></div>
+        <img${add_attribute("src", imgQgisChoropleth, 0)} alt="${"qgis-choropleth"}">
+
+        <p>This map was created by going to <i>Project</i>, selecting <i>New Print Layout</i>, and then adding in a map view, legend, and scale bar to the black page</p></div>
+
+    <div id="${"text"}"><h2>Tutorial (3)</h2>
+
+        <h3>Geoprocessing</h3>
+
+        <p>Next, we&#39;re going to learn a few commonly used geoprocessing tasks, using the following data:</p>
+
+        <ul><li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}">Street Centrelines</a> (same as in tutorial 1).</li>
+            <li><a href="${"https://open.toronto.ca/dataset/toronto-public-library-branch-locations/"}">Public Libraries</a>.</li>
+            <li><a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson"}">Apartment Buildings</a> (originally geocoded from the City&#39;s apartment building registration and evaluation data on <a href="${"https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc"}">Open Data Toronto</a>).</li></ul>
+
+        <h4>Projections and re-projecting data</h4>
+
+        <p>All spatial data include location data, typically in the form of coordinates. A Coordinate Reference System (CRS) is a framework/schema for referencing where features are on the earth&#39;s surface. CRSs can have different units as well (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort shapes and has intuitive units (e.g. metres rather than degrees).
+        </p>
+        <p>To re-project and change the CRS of a vector layer, go to <i>Vector</i>, <i>Data Management Tools</i>, then click <i>Reproject Layer</i>. Try converting the public libraries dataset into <code>NAD83 / UTM zone 17N - EPSG:26917</code>. This is a commonly used CRS for the Toronto region with units in metres.
+        </p>
+
+        <h4>Buffers</h4>
+        <p>Using our reprojected layer, try creating 1km buffers around the location of public libraries. At the top of the QGIS menu, go to <i>Vector</i>, <i>Geoprocessing Tools</i>, then click <i>Buffer</i>. Select the public libraries as the input layer, and <code>1000</code> metres as the distance. We can quickly see where people have easy access to public libraries in the city.
+        </p>
+        <img${add_attribute("src", imgQgisBuffer, 0)} alt="${"qgis-buffer"}">
+
+        <h4>Select by Location</h4>
+
+        <p>This can become more useful when we compare it to other layers. Let&#39;s try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>&quot;A_PROPERTY_TYPE&quot;=&#39;SOCIAL HOUSING&#39; OR &quot;A_PROPERTY_TYPE&quot;=&#39;TCHC&#39;</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total.
+        </p>
+        <img${add_attribute("src", imgQgisBufferSelect, 0)} alt="${"qgis-bufferselect"}">
+        
+
+
+        
+        </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
 
 </main>`;
 });

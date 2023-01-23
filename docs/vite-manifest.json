@@ -1,31 +1,39 @@
 {
-  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png": {
-    "file": "_app/immutable/assets/dem-toronto-c547fdc3.png",
-    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png"
-  },
-  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png": {
-    "file": "_app/immutable/assets/qgis-blank-c49863c8.png",
-    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png"
-  },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png": {
     "file": "_app/immutable/assets/osm-college-bf243ca2.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png"
   },
-  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png": {
-    "file": "_app/immutable/assets/qgis-railct-8ad297f5.png",
-    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png"
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png": {
+    "file": "_app/immutable/assets/dem-toronto-c547fdc3.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/gis-layers.png": {
     "file": "_app/immutable/assets/gis-layers-479f3a99.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/gis-layers.png"
   },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png": {
+    "file": "_app/immutable/assets/qgis-blank-c49863c8.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png": {
+    "file": "_app/immutable/assets/qgis-railct-8ad297f5.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png"
+  },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-choropleth.png": {
     "file": "_app/immutable/assets/qgis-choropleth-81a06853.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-choropleth.png"
   },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-buffer.png": {
+    "file": "_app/immutable/assets/qgis-buffer-9fdd946a.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-buffer.png"
+  },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-centre.png": {
     "file": "_app/immutable/assets/qgis-centre-db6f5d95.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-centre.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png": {
+    "file": "_app/immutable/assets/qgis-bufferselect-b78dff64.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bikeshare.png": {
     "file": "_app/immutable/assets/qgis-bikeshare-2fd27b69.png",
@@ -44,12 +52,12 @@
     "src": "src/routes/assets/Trade Gothic LT Bold.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-1862eb52.js",
+    "file": "_app/immutable/start-9b6f9b79.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-a8a08db8.js",
-      "_singletons-ac6f478c.js"
+      "_singletons-128d1fad.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -68,12 +76,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-353c522b.js",
+    "file": "_app/immutable/components/error.svelte-c59bb959.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-a8a08db8.js",
-      "_singletons-ac6f478c.js"
+      "_singletons-128d1fad.js"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/+page.svelte": {
@@ -85,11 +93,11 @@
       "_TopSofC-31e5beff.js"
     ],
     "css": [
-      "_app/immutable/assets/styles-f36e34f2.css"
+      "_app/immutable/assets/styles-dc41de19.css"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte": {
-    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/GIS-workshop/_page.svelte-0dc76f65.js",
+    "file": "_app/immutable/components/pages/spatial-analysis-MUI2000/GIS-workshop/_page.svelte-8eb8abb2.js",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -97,7 +105,7 @@
       "_TopSofC-31e5beff.js"
     ],
     "css": [
-      "_app/immutable/assets/styles-f36e34f2.css"
+      "_app/immutable/assets/styles-dc41de19.css"
     ],
     "assets": [
       "_app/immutable/assets/osm-college-bf243ca2.png",
@@ -108,7 +116,9 @@
       "_app/immutable/assets/qgis-centre-db6f5d95.png",
       "_app/immutable/assets/qgis-bikeshare-2fd27b69.png",
       "_app/immutable/assets/qgis-railct-8ad297f5.png",
-      "_app/immutable/assets/qgis-choropleth-81a06853.png"
+      "_app/immutable/assets/qgis-choropleth-81a06853.png",
+      "_app/immutable/assets/qgis-buffer-9fdd946a.png",
+      "_app/immutable/assets/qgis-bufferselect-b78dff64.png"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte": {
@@ -120,7 +130,7 @@
     ],
     "css": [
       "_app/immutable/assets/_page-250bdaba.css",
-      "_app/immutable/assets/styles-f36e34f2.css"
+      "_app/immutable/assets/styles-dc41de19.css"
     ]
   },
   "src/routes/+layout.js": {
@@ -155,8 +165,8 @@
       "__page-32babd19.js"
     ]
   },
-  "_singletons-ac6f478c.js": {
-    "file": "_app/immutable/chunks/singletons-ac6f478c.js",
+  "_singletons-128d1fad.js": {
+    "file": "_app/immutable/chunks/singletons-128d1fad.js",
     "imports": [
       "_index-a8a08db8.js"
     ]
@@ -198,7 +208,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-bcdd20eb.js",
+    "file": "_app/immutable/chunks/1-819059f6.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -215,7 +225,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-6d6b2dbe.js",
+    "file": "_app/immutable/chunks/3-6c4ff7d9.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
@@ -241,7 +251,7 @@
     "src": "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css"
   },
   "styles.css": {
-    "file": "_app/immutable/assets/styles-f36e34f2.css",
+    "file": "_app/immutable/assets/styles-dc41de19.css",
     "src": "styles.css"
   }
 }
