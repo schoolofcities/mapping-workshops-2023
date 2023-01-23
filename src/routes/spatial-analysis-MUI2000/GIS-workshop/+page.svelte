@@ -42,9 +42,11 @@
 
         <h1>(Q)GIS WORKSHOP</h1>
 
-        <p>Jeff Allen</p>
+        <p>For MUI2000</p>
 
-        <p>January 23 & 30, 2023</p>
+        <p>By Jeff Allen</p>
+
+        <p>On January 23 & 30, 2023</p>
 
     </div>
 
@@ -197,7 +199,7 @@
 
         <p>First, let's look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21">here</a>, while attribute data were downloaded from <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm">here</a>.</p>
 
-        <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction.</p>
+        <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction. The screenshot below shows the result. (Also note how the map has been rotated 17.7 degrees, to horizontally align some of the features and reduce empty white space).</p>
 
         <img src={imgQgisRailct} alt="qgis-railct">
 
@@ -212,6 +214,37 @@
         <img src={imgQgisChoropleth} alt="qgis-choropleth">
         
     </div>
+
+    <div id="text">
+
+        <h2>Tutorial (3)</h2>
+
+        <h3>Buffering & Dissolving</h3>
+
+        <p>We're going to learn two very commonly used geoprocessing tasks:</p>
+
+        <p>A) Buffering - taking a input features and drawing polygons around them at specified distance. Super useful for analyzing and visualizing what is "near" a location</p>
+
+        <p>B) Dissolving - aggregating geometries based on specified attributes. Can be combined with summarizing numeric data.</p>
+
+        <p>Let's begin by opening the CentreLine data linked to in tutorial 1). Also download and open the location of <a href="https://open.toronto.ca/dataset/toronto-public-library-branch-locations/">public libraries in Toronto </a></p>
+
+        
+
+        <!-- "FEATURE_00" = 'Major Arterial' OR "FEATURE_00" = 'Minor Arterial' -->
+
+    </div>
+
+    <!-- getting data from OSM -->
+
+    <!-- geocoding -->
+
+    <!-- buffering / dissolving -->
+
+    <!-- network analysis / buffers -->
+
+    <!-- spatial joins -->
+
 
 </main>
 
