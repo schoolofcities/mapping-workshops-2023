@@ -12,6 +12,8 @@
     import imgQgisBikeshare from './assets/qgis-bikeshare.png';
     import imgQgisRailct from './assets/qgis-railct.png';
     import imgQgisChoropleth from './assets/qgis-choropleth.png'
+    import imgQgisBuffer from './assets/qgis-buffer.png'
+    import imgQgisBufferSelect from './assets/qgis-bufferselect.png'
 
 </script>
 
@@ -81,7 +83,7 @@
             <li>location data and spatial dimensions (the where)</li>
         </ul>
 
-        <p>Spatial data, this combination of attribute and location data, can be organized and represented in a number of different formts.</p>
+        <p>Spatial data, this combination of attribute and location data, can be organized and represented in a number of different formats.</p>
 
         <p>For example, a city can be represented on a map via a single point with a label (e.g. based on latitude and longitude coordinates). Or a city can be represented as a polygon, based on on it's administrative boundary</p>
 
@@ -205,13 +207,15 @@
 
         <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the dissemination area boundary, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
-        <p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth map</a> (maps where polygons are shaded by numeruc attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It's often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
+        <p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It's often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 
         <p>(Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).</p>
 
         <p>For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood relative to major transit lines.</p>
 
         <img src={imgQgisChoropleth} alt="qgis-choropleth">
+
+        <p>This map was created by going to <i>Project</i>, selecting <i>New Print Layout</i>, and then adding in a map view, legend, and scale bar to the black page</p>
         
     </div>
 
@@ -219,18 +223,41 @@
 
         <h2>Tutorial (3)</h2>
 
-        <h3>Buffering & Dissolving</h3>
+        <h3>Geoprocessing</h3>
 
-        <p>We're going to learn two very commonly used geoprocessing tasks:</p>
+        <p>Next, we're going to learn a few commonly used geoprocessing tasks, using the following data:</p>
 
-        <p>A) Buffering - taking a input features and drawing polygons around them at specified distance. Super useful for analyzing and visualizing what is "near" a location</p>
+        <ul>
+            <li><a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/">Street Centrelines</a> (same as in tutorial 1).</li>
+            <li><a href="https://open.toronto.ca/dataset/toronto-public-library-branch-locations/">Public Libraries</a>.</li>
+            <li><a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson">Apartment Buildings</a> (originally geocoded from the City's apartment building registration and evaluation data on <a href="https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc">Open Data Toronto</a>).</li>
+        </ul>
 
-        <p>B) Dissolving - aggregating geometries based on specified attributes. Can be combined with summarizing numeric data.</p>
+        <h4>Projections and re-projecting data</h4>
 
-        <p>Let's begin by opening the CentreLine data linked to in tutorial 1). Also download and open the location of <a href="https://open.toronto.ca/dataset/toronto-public-library-branch-locations/">public libraries in Toronto </a></p>
+        <p>
+            All spatial data include location data, typically in the form of coordinates. A Coordinate Reference System (CRS) is a framework/schema for referencing where features are on the earth's surface. CRSs can have different units as well (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort shapes and has intuitive units (e.g. metres rather than degrees).
+        </p>
+        <p>
+            To re-project and change the CRS of a vector layer, go to <i>Vector</i>, <i>Data Management Tools</i>, then click <i>Reproject Layer</i>. Try converting the public libraries dataset into <code>NAD83 / UTM zone 17N - EPSG:26917</code>. This is a commonly used CRS for the Toronto region with units in metres.
+        </p>
 
+        <h4>Buffers</h4>
+        <p>
+            Using our reprojected layer, try creating 1km buffers around the location of public libraries. At the top of the QGIS menu, go to <i>Vector</i>, <i>Geoprocessing Tools</i>, then click <i>Buffer</i>. Select the public libraries as the input layer, and <code>1000</code> metres as the distance. We can quickly see where people have easy access to public libraries in the city.
+        </p>
+        <img src={imgQgisBuffer} alt="qgis-buffer">
+
+        <h4>Select by Location</h4>
+
+        <p>
+            This can become more useful when we compare it to other layers. Let's try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>"A_PROPERTY_TYPE"='SOCIAL HOUSING' OR "A_PROPERTY_TYPE"='TCHC'</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total.
+        </p>
+        <img src={imgQgisBufferSelect} alt="qgis-bufferselect">
         
 
+
+        
         <!-- "FEATURE_00" = 'Major Arterial' OR "FEATURE_00" = 'Minor Arterial' -->
 
     </div>
