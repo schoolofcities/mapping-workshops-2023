@@ -52,7 +52,11 @@ p {
 
 ul {
     font-family: 'Source Serif Pro', serif;
-    font-size: 20px;
+    font-size: 19px;
+}
+li {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 19px;
 }
 
 a {
