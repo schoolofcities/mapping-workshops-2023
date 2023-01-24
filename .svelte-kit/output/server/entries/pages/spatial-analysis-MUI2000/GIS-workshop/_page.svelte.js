@@ -1,6 +1,7 @@
 import { c as create_ssr_component, v as validate_component, d as add_attribute } from "../../../../chunks/index.js";
 import { T as TopSofC } from "../../../../chunks/TopSofC.js";
-/* empty css                         */const imgOsmCollege = "/mapping-workshops-2023/_app/immutable/assets/osm-college-bf243ca2.png";
+/* empty css                         */const imgCoords = "/mapping-workshops-2023/_app/immutable/assets/coords-8d7033f1.png";
+const imgOsmCollege = "/mapping-workshops-2023/_app/immutable/assets/osm-college-bf243ca2.png";
 const imgDemToronto = "/mapping-workshops-2023/_app/immutable/assets/dem-toronto-c547fdc3.png";
 const imgGisLayers = "/mapping-workshops-2023/_app/immutable/assets/gis-layers-479f3a99.png";
 const imgQgisBlank = "/mapping-workshops-2023/_app/immutable/assets/qgis-blank-c49863c8.png";
@@ -38,7 +39,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>GIS is often thought of as more than just a tool or piece of software. It can refer to all aspects of managing and analyzing digital spatially referenced data.</p>
 
-        <p>The following provides a brief overview of GIS followed by two short tutorials for getting started with GIS, using <a href="${"https://www.qgis.org/en/site/"}">QGIS</a>, a free and open source desktop GIS software. The first tutorial uses data from the City of Toronto&#39;s Open Data portal. The second analyzes demographic data from the Canadian census as well as public transit data for Toronto</p></div>
+        <p>The following provides a brief overview of GIS followed by two short tutorials for getting started with GIS, using <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>, a free and open source desktop GIS software. The first tutorial uses data from the City of Toronto&#39;s Open Data portal. The second analyzes demographic data from the Canadian census as well as public transit data for Toronto</p></div>
 
     <div id="${"text"}"><h2>Spatial Data</h2>
 
@@ -59,11 +60,13 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>Vector data uses geographic coordinates, or a series of coordinates, to create points, lines, and polygons representing real-world features.</p>
 
-        <p>e.g. in the map below (a screenshot of <a href="${"https://www.openstreetmap.org/"}">OpenStreetMap</a>) lines are used to represent roads and rail, points for retail, polygons for parks and buildings, etc. </p>
+        <img width="${"400"}"${add_attribute("src", imgCoords, 0)} alt="${"coords"}">
 
-        <img${add_attribute("src", imgOsmCollege, 0)} alt="${"OpenStreetMap"}">
+        <p>e.g. in the map below (a screenshot of <a href="${"https://www.openstreetmap.org/"}" target="${"_blank"}">OpenStreetMap</a>) lines are used to represent roads and rail, points for retail, polygons for parks and buildings, etc. </p>
 
-        <p><a href="${"https://en.wikipedia.org/wiki/GeoJSON"}">GeoJSON</a> and the <a href="${"https://en.wikipedia.org/wiki/Shapefile"}">Shapefile</a> are probably the two most common vector data formats.</p>
+        <img width="${""}"${add_attribute("src", imgOsmCollege, 0)} alt="${"OpenStreetMap"}">
+
+        <p><a href="${"https://en.wikipedia.org/wiki/GeoJSON"}" target="${"_blank"}">GeoJSON</a> and the <a href="${"https://en.wikipedia.org/wiki/Shapefile"}" target="${"_blank"}">Shapefile</a> are probably the two most common vector data formats.</p>
 
         <h3>Raster Data</h3>
 
@@ -133,9 +136,9 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <h3>Table Joins and Choropleths</h3>
 
-        <p>Start up a new QGIS project and add in the data downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip"}">here</a>.</p>
+        <p>Start up a new QGIS project and add in the data downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip"}" target="${"_blank"}">here</a>.</p>
 
-        <p>First, let&#39;s look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21"}">here</a>, while attribute data were downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm"}">here</a>.</p>
+        <p>First, let&#39;s look at data. We have a polygon layer which represents census tracts. These data are created by Statistics Canada to share aggregated for the Canadian census. They approximately correspond to neighbourhoods. Census tract boundary data were originally downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21"}" target="${"_blank"}">here</a>, while attribute data were downloaded from <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/index-eng.cfm"}" target="${"_blank"}">here</a>.</p>
 
         <p>We also have a line layer representing major transit lines in Toronto (originally sourced from Metrolinx). We can categorize line data by <code>status</code>, using different colours or line types to display whether the transit route is existing or under construction. The screenshot below shows the result. (Also note how the map has been rotated 17.7 degrees, to horizontally align some of the features and reduce empty white space).</p>
 
@@ -143,7 +146,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the censust tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
-        <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
+        <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}" target="${"_blank"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 
         <p>(Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).</p>
 
@@ -159,9 +162,9 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>Next, we&#39;re going to learn a few commonly used geoprocessing tasks, using the following data:</p>
 
-        <ul><li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}">Street Centrelines</a> (same as in tutorial 1).</li>
-            <li><a href="${"https://open.toronto.ca/dataset/toronto-public-library-branch-locations/"}">Public Libraries</a>.</li>
-            <li><a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson"}">Apartment Buildings</a> (originally geocoded from the City&#39;s apartment building registration and evaluation data on <a href="${"https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc"}">Open Data Toronto</a>).</li></ul>
+        <ul><li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}" target="${"_blank"}">Street Centrelines</a> (same as in tutorial 1).</li>
+            <li><a href="${"https://open.toronto.ca/dataset/toronto-public-library-branch-locations/"}" target="${"_blank"}">Public Libraries</a>.</li>
+            <li><a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson"}" target="${"_blank"}">Apartment Buildings</a> (originally geocoded from the City&#39;s apartment building registration and evaluation data on <a href="${"https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc"}" target="${"_blank"}">Open Data Toronto</a>).</li></ul>
 
         <h4>Projections and re-projecting data</h4>
 
