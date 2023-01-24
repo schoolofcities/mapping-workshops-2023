@@ -51,7 +51,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>For example, a city can be represented on a map via a single point with a label (e.g. based on latitude and longitude coordinates). Or a city can be represented as a polygon, based on on it&#39;s administrative boundary</p>
 
-        <p>Importantly, there are always uncertainty about the level of accuracy, precision, and resolution of spatial data. Spatial data are representations of reality, and thus have some loss of information when used for visualization and analysis. Any analysis can only be as good as the available data.</p>
+        <p>Importantly, there are always uncertainty about the level of accuracy, precision, and resolution of spatial data. Spatial data are abstractions of reality, and thus have some loss of information when used for visualization and analysis. Any analysis can only be as good as the available data.</p>
 
         <p>The two most common forms of spatial data are <b>vector</b> data and <b>raster</b> data.</p>
 
@@ -101,29 +101,31 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <h3>Loading, Querying, and Visualizing Data</h3>
 
-        <p>First open up QGIS with a blank project. The top bars are various functions/tools. The &quot;Browser&quot; allows for navigating and loading datasets. The &quot;Layers&quot; panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
+        <p>Let&#39;s open up QGIS with a blank project. The top bars are various functions/tools for working with data. The &quot;Browser&quot; allows for navigating and loading datasets. The &quot;Layers&quot; panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
         </p>
         <img${add_attribute("src", imgQgisBlank, 0)} alt="${"qgis-blank"}">
-        <p>Let&#39;s begin by grabbing data from the City of Toronto&#39;s Open Data portal and loading it into QGIS. This is the data we&#39;ll be looking at:
+        <p>Let&#39;s begin by finding data from the City of Toronto&#39;s Open Data portal and loading it into QGIS. This is the data we&#39;ll be looking at:
         </p>
-        <ul><li><a href="${"https://open.toronto.ca/dataset/business-improvement-areas/"}">Business Improvement Areas (BIA)</a>.</li>
-            <li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}">Street Centrelines</a>.</li>
-            <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py"}">script</a>, the result can be downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/bikeshare-stations.geojson"}">here</a>.</li>
-            <li><a href="${"https://open.toronto.ca/dataset/web-map-services/"}">Aerial Imagery</a>. We&#39;ll be adding the most recent imagery layer.</li></ul>
-        <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer-&gt;Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer.
+        <ul><li><a href="${"https://open.toronto.ca/dataset/business-improvement-areas/"}" target="${"_blank"}">Business Improvement Areas (BIA)</a>.</li>
+            <li><a href="${"https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/1d079757-377b-4564-82df-eb5638583bfb/resource/d86bdca4-ab2c-470d-80fb-34647ea0e87f/download/Centreline%20-%20Version%202%20-%204326.zip"}" target="${"_blank"}">Street Centrelines</a> (streets, railways, trails, etc.).</li>
+            <li><a href="${"https://open.toronto.ca/dataset/web-map-services/"}" target="${"_blank"}">Aerial Imagery</a>. We&#39;ll be adding the most recent imagery layer.</li>
+            <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}" target="${"_blank"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py"}" target="${"_blank"}">script</a>, the result can be downloaded from <a href="${"https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/data/bikeshare-stations.geojson"}" target="${"_blank"}" download="${""}">here</a> (if this link doesn&#39;t download directly, you can copy and paste the content into a text editor, or just &quot;save as&quot; the web page).</li></ul>
+        <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer..
         </p>
-        <p>Now let&#39;s add BIA and Centreline data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer-&gt;Data Source Manager</i> and navigating to <i>Vector&quot;</i>.
+        <p>Now let&#39;s add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector&quot;</i>.
         </p>
         <p>Once added, your map should look something like this:
         </p>
         <img${add_attribute("src", imgQgisLayers1, 0)} alt="${"qgis-layers1"}">
-        <p>The layers can be toggled on and off. They can also be dragged into different orders, the top layer on the panel will always be the layer that is shown on top on the map. Right-clicking on the layer, going to <i>Properties</i>, then <i>Symbology</i>. In the image above, I changed the colours of the two vector layers, as well as the stroke-width of the Centreline layer.
+        <p>The layers can be toggled on and off. They can also be dragged into different orders, the top layer on the panel will always be the layer that is shown on top on the map. 
+        </p>
+        <p>We can change the colours and style of each layer by right-clicking on a layer, going to <i>Properties</i>, and then <i>Symbology</i>. In the image above, I changed the colours of the two vector layers, as well as the stroke-width of the Centreline layer.
         </p>
         <p>Let&#39;s explore how we can select and filter data. We&#39;ll use the Centreline layer as an example. Right-clicking they layer allows us to view it&#39;s attribute table. There is a column in here called <code>FEATURE_00</code> which indicates the type of feature. Right-click and open up the <i>Properties</i> of the layer, then click <i>Source</i>, and play with filtering the data. e.g. this is a query for filtering to only show laneways <code>&quot;FEATURE_00&quot; = &#39;Laneway&#39;</code></p>
-        <p>We can also visualize data based on values in the attribute table. In the CentreLine <i>Properties</i>, go to <i>Symbology</i>, then at the top, select <i>Categorized</i>. Try selecting <i>FEATURE_00</i> again. We can now quickly visualize where different features are on the map! Each category can also be turned off and on in the layers panel as well.
+        <p>We can also visualize data based on values in the attribute table. First clear the above query. Then in the CentreLine <i>Properties</i>, go to <i>Symbology</i>, then at the top, select <i>Categorized</i>. Try selecting <i>FEATURE_00</i> again. Click <i>Classify</i> at the bottom of the window. We can now quickly visualize where different features are on the map! Each category can also be styled individually be turned off and on in the layers panel.
         </p>
         <img${add_attribute("src", imgQgisCentre, 0)} alt="${"qgis-centre"}">
-        <p>Now let&#39;s learn how to visualize data based on numeric data. We can use the bike share station data for this. Download and load this dataset into QGIS. Then go to it&#39;s <i>Properties</i>, <i>Symbology</i>, then at the top, select <i>Graduated</i>. In this menu, we can color the points based on a numeric value in a column. Let&#39;s colour by the <code>capacity</code> column. Notice the options available for classifying data (number of bins, whether to use quantiles or equal intervals, etc.). Different classification schemes can highlight or hide different spatial patterns.
+        <p>Now let&#39;s learn how to visualize data based on numeric data. We can use the bike share station data for this. Download and load this dataset into QGIS. Then go to it&#39;s <i>Properties</i>, <i>Symbology</i>, then at the top, select <i>Graduated</i>. In this menu, we can color the points based on a numeric value in a column. Let&#39;s colour by the <code>capacity</code> column (this is the number of bikes that can be stored at each docking station). Notice the options available for classifying data (number of bins, whether to use quantiles or equal intervals, etc.). Hit <i>Classify</i> to update the map. Note how different classification schemes can highlight or hide different spatial patterns.
         </p>
         <img${add_attribute("src", imgQgisBikeshare, 0)} alt="${"qgis-bikeshare"}"></div>
 
@@ -139,7 +141,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <img${add_attribute("src", imgQgisRailct, 0)} alt="${"qgis-railct"}">
 
-        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of dissemination areas. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the dissemination area boundary, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
+        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the censust tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
         <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 
@@ -149,7 +151,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <img${add_attribute("src", imgQgisChoropleth, 0)} alt="${"qgis-choropleth"}">
 
-        <p>This map was created by going to <i>Project</i>, selecting <i>New Print Layout</i>, and then adding in a map view, legend, and scale bar to the black page</p></div>
+        <p>This map was exported by going to <i>Project</i>, selecting <i>New Print Layout</i>, and then adding in a map view, legend, and scale bar to the blank page.</p></div>
 
     <div id="${"text"}"><h2>Tutorial (3)</h2>
 
@@ -163,9 +165,9 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <h4>Projections and re-projecting data</h4>
 
-        <p>All spatial data include location data, typically in the form of coordinates. A Coordinate Reference System (CRS) is a framework/schema for referencing where features are on the earth&#39;s surface. CRSs can have different units as well (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort shapes and has intuitive units (e.g. metres rather than degrees).
+        <p>All spatial data include location data, typically in the form of coordinates. A <a href="${"https://en.wikipedia.org/wiki/Spatial_reference_system"}">Coordinate Reference System (CRS)</a> is a framework/schema for referencing where features are on the earth&#39;s surface. Each CRS has units (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort local areas or distances, and has intuitive units (e.g. working with distances in metres rather than in degrees).
         </p>
-        <p>To re-project and change the CRS of a vector layer, go to <i>Vector</i>, <i>Data Management Tools</i>, then click <i>Reproject Layer</i>. Try converting the public libraries dataset into <code>NAD83 / UTM zone 17N - EPSG:26917</code>. This is a commonly used CRS for the Toronto region with units in metres.
+        <p>To change the CRS of a vector layer, go to <i>Vector</i>, <i>Data Management Tools</i>, then click <i>Reproject Layer</i>. Try converting the public libraries dataset into <code>NAD83 / UTM zone 17N - EPSG:26917</code>. This is a commonly used CRS for the Toronto region with units in metres.
         </p>
 
         <h4>Buffers</h4>
