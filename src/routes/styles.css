@@ -48,8 +48,9 @@ h4 {
 p {
     font-family: 'Source Serif Pro', serif;
     font-size: 19px;
-    word-break: break-all;
 }
+
+code {word-break: break-all;}
 
 ul {
     font-family: 'Source Serif Pro', serif;
