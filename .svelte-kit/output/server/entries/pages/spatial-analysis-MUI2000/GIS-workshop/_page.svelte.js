@@ -168,7 +168,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <h4>Projections and re-projecting data</h4>
 
-        <p>All spatial data include location data, typically in the form of coordinates. A <a href="${"https://en.wikipedia.org/wiki/Spatial_reference_system"}">Coordinate Reference System (CRS)</a> is a framework/schema for referencing where features are on the earth&#39;s surface. Each CRS has units (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort local areas or distances, and has intuitive units (e.g. working with distances in metres rather than in degrees).
+        <p>All spatial data include location data, typically in the form of coordinates. A <a href="${"https://en.wikipedia.org/wiki/Spatial_reference_system"}">Coordinate Reference System (CRS)</a> is a schema for referencing where features are on the earth&#39;s surface. Each CRS has specified units (e.g. degrees, metres, etc.). When working with urban data, we often want to have data in a CRS that does not distort local areas or distances, and has intuitive units (e.g. working with distances in metres rather than in degrees).
         </p>
         <p>To change the CRS of a vector layer, go to <i>Vector</i>, <i>Data Management Tools</i>, then click <i>Reproject Layer</i>. Try converting the public libraries dataset into <code>NAD83 / UTM zone 17N - EPSG:26917</code>. This is a commonly used CRS for the Toronto region with units in metres.
         </p>
@@ -184,8 +184,12 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         </p>
         <img${add_attribute("src", imgQgisBufferSelect, 0)} alt="${"qgis-bufferselect"}">
         
+        <h4>Spatial Join</h4>
+
+        <p></p>
 
 
+        
         
         </div>
 
