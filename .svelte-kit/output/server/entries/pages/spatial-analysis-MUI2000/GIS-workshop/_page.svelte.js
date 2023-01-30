@@ -12,6 +12,7 @@ const imgQgisRailct = "/mapping-workshops-2023/_app/immutable/assets/qgis-railct
 const imgQgisChoropleth = "/mapping-workshops-2023/_app/immutable/assets/qgis-choropleth-81a06853.png";
 const imgQgisBuffer = "/mapping-workshops-2023/_app/immutable/assets/qgis-buffer-9fdd946a.png";
 const imgQgisBufferSelect = "/mapping-workshops-2023/_app/immutable/assets/qgis-bufferselect-b78dff64.png";
+const imgQgisCountTable = "/mapping-workshops-2023/_app/immutable/assets/qgis-counttable-b4c24b31.png";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `${$$result.head += `<!-- HEAD_svelte-1xs4wlw_START --><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin><link href="${"https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"}" rel="${"stylesheet"}"><link href="${"https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"}" rel="${"stylesheet"}"><meta name="${"viewport"}" content="${"width=device-width, initial-scale=1, minimum-scale=1"}">${$$result.title = `<title>GIS Workshop / MUI2000</title>`, ""}<meta name="${"description"}" content="${"GIS workshop for MUI2000"}"><meta name="${"author"}" content="${"Jeff Allen"}"><!-- HEAD_svelte-1xs4wlw_END -->`, ""}
 
@@ -113,7 +114,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
             <li><a href="${"https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/1d079757-377b-4564-82df-eb5638583bfb/resource/d86bdca4-ab2c-470d-80fb-34647ea0e87f/download/Centreline%20-%20Version%202%20-%204326.zip"}" target="${"_blank"}">Street Centrelines</a> (streets, railways, trails, etc.).</li>
             <li><a href="${"https://open.toronto.ca/dataset/web-map-services/"}" target="${"_blank"}">Aerial Imagery</a>. We&#39;ll be adding the most recent imagery layer.</li>
             <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}" target="${"_blank"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py"}" target="${"_blank"}">script</a>, the result can be downloaded from <a href="${"https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/data/bikeshare-stations.geojson"}" target="${"_blank"}" download="${""}">here</a> (if this link doesn&#39;t download directly, you can copy and paste the content into a text editor, or just &quot;save as&quot; the web page).</li></ul>
-        <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer..
+        <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> (this was copied from the City of Toronto&#39;s page linked from above). Also provide a descriptive name for the layer (I called it <code>&quot;Toronto Imagery&quot;</code>)
         </p>
         <p>Now let&#39;s add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector&quot;</i>.
         </p>
@@ -162,8 +163,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>Next, we&#39;re going to learn a few commonly used geoprocessing tasks, using the following data:</p>
 
-        <ul><li><a href="${"https://open.toronto.ca/dataset/toronto-centreline-tcl/"}" target="${"_blank"}">Street Centrelines</a> (same as in tutorial 1).</li>
-            <li><a href="${"https://open.toronto.ca/dataset/toronto-public-library-branch-locations/"}" target="${"_blank"}">Public Libraries</a>.</li>
+        <ul><li><a href="${"https://open.toronto.ca/dataset/toronto-public-library-branch-locations/"}" target="${"_blank"}">Public Libraries</a>.</li>
             <li><a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson"}" target="${"_blank"}">Apartment Buildings</a> (originally geocoded from the City&#39;s apartment building registration and evaluation data on <a href="${"https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc"}" target="${"_blank"}">Open Data Toronto</a>).</li></ul>
 
         <h4>Projections and re-projecting data</h4>
@@ -180,16 +180,19 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <h4>Select by Location</h4>
 
-        <p>This can become more useful when we compare it to other layers. Let&#39;s try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>&quot;A_PROPERTY_TYPE&quot;=&#39;SOCIAL HOUSING&#39; OR &quot;A_PROPERTY_TYPE&quot;=&#39;TCHC&#39;</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total.
+        <p>These buffers can be quite useful when we compare them to other layers. Let&#39;s try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>&quot;A_PROPERTY_TYPE&quot;=&#39;SOCIAL HOUSING&#39; OR &quot;A_PROPERTY_TYPE&quot;=&#39;TCHC&#39;</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total. You can invert the selection by by clicking on the <i>Invert Selection</i> button (the button looks like two interlocking triangles that make a square). This button can be found in the select toolbar at the top of QGIS or after opening the layer&#39;s attribute table.
         </p>
         <img${add_attribute("src", imgQgisBufferSelect, 0)} alt="${"qgis-bufferselect"}">
         
         <h4>Spatial Join</h4>
 
-        <p></p>
-
-
-        
+        <p>Above we were able to select features in a layer based on their spatial location relative to another layer. We can also use spatial location to join and aggregate data between layers. Let&#39;s use two new datasets for an example. Outdoor Ice Rinks in Toronto, and polygons representing the 6 former municipalities.
+        </p>
+            <ul><li><a href="${"https://open.toronto.ca/dataset/former-municipality-boundaries/"}" target="${"_blank"}">Former Municipal Boundaries</a>.</li>
+                <li><a href="${"https://open.toronto.ca/dataset/outdoor-artificial-ice-rinks/"}" target="${"_blank"}">Outdoor Ice Rinks</a></li></ul>
+        <p>We can use a spatial join to count how many outdoor rinks are within each former municipality. Click on <i>Processing</i> in the top bar, then click <i>Toolbox</i>. A panel should open up, which includes almost all of the built in geoprocessing tools included in QGIS. To attempt a spatial join, search for and open <i>Join attributes by location (summary)</i>. We want to join to features in the boundaries layer by comparing to the outdoor rinks layer. Then click on <i>Summaries to Calculate</i>. Here we can select what statistics to calculate. For this example, we just want to select <i>count</i>. Then click run. The output will be a new layer, but with additional attribute columns with counts of rinks. Open up the attribute table to see.
+        </p>
+        <img${add_attribute("src", imgQgisCountTable, 0)} alt="${"qgis-counttable"}">
         
         </div>
 
