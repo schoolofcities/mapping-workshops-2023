@@ -15,7 +15,8 @@
     import imgQgisChoropleth from './assets/qgis-choropleth.png'
     import imgQgisBuffer from './assets/qgis-buffer.png'
     import imgQgisBufferSelect from './assets/qgis-bufferselect.png'
-
+    import imgQgisCountTable from './assets/qgis-counttable.png'
+   
 </script>
 
 
@@ -264,14 +265,15 @@
         <h4>Spatial Join</h4>
 
         <p>
-            Above we were able to select features in a layer based on their spatial location relative to another layer. We can also use spatial location to join and aggregate data between layers. For example, let's try to count how many apartment buildings there are in each BIA in Toronto.  
+            Above we were able to select features in a layer based on their spatial location relative to another layer. We can also use spatial location to join and aggregate data between layers. Let's use two new datasets for an example. Outdoor Ice Rinks in Toronto, and polygons representing the 6 former municipalities.
 
-            
-
+            <ul>
+                <li><a href="https://open.toronto.ca/dataset/former-municipality-boundaries/" target="_blank">Former Municipal Boundaries</a>.</li>
+                <li><a href="https://open.toronto.ca/dataset/outdoor-artificial-ice-rinks/" target="_blank">Outdoor Ice Rinks</li>
+            </ul>
+            We can use a spatial join to count how many outdoor rinks are within each former municipality. Click on <i>Processing</i> in the top bar, then click <i>Toolbox</i>. A panel should open up, which includes almost all of the built in geoprocessing tools included in QGIS. To attempt a spatial join, search for and open <i>Join attributes by location (summary)</i>. We want to join to features in the boundaries layer by comparing to the outdoor rinks layer. Then click on <i>Summaries to Calculate</i>. Here we can select what statistics to calculate. For this example, we just want to select <i>count</i>. Then click run. The output will be a new layer, but with additional attribute columns with counts of rinks. Open up the attribute table to see.
         </p>
-
-
-        
+        <img src={imgQgisCountTable} alt="qgis-counttable">
         
         <!-- "FEATURE_00" = 'Major Arterial' OR "FEATURE_00" = 'Minor Arterial' -->
 
