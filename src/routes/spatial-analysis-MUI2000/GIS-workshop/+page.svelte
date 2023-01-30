@@ -168,7 +168,7 @@
             <li><a href="https://open.toronto.ca/dataset/bike-share-toronto/" target="_blank">Bike Share Stations</a>. This data are a "live" <code>json</code> feed, I've scraped it with this <a href="https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py" target="_blank">script</a>, the result can be downloaded from <a href="https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/data/bikeshare-stations.geojson" target="_blank" download="">here</a> (if this link doesn't download directly, you can copy and paste the content into a text editor, or just "save as" the web page).</li>
         </ul>
         <p>
-            Let's start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City's server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> and provide a descriptive name for the layer..
+            Let's start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City's server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> (this was copied from the City of Toronto's page linked from above). Also provide a descriptive name for the layer (I called it <code>"Toronto Imagery"</code>)
         </p>
         <p>
             Now let's add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector"</i>.
@@ -234,9 +234,9 @@
         <p>Next, we're going to learn a few commonly used geoprocessing tasks, using the following data:</p>
 
         <ul>
-            <li><a href="https://open.toronto.ca/dataset/toronto-centreline-tcl/" target="_blank">Street Centrelines</a> (same as in tutorial 1).</li>
             <li><a href="https://open.toronto.ca/dataset/toronto-public-library-branch-locations/" target="_blank">Public Libraries</a>.</li>
             <li><a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto-apartments.geojson" target="_blank">Apartment Buildings</a> (originally geocoded from the City's apartment building registration and evaluation data on <a href="https://open.toronto.ca/catalogue/?search=apartment%20buildings&sort=score%20desc" target="_blank">Open Data Toronto</a>).</li>
+            <li><a href="https://open.toronto.ca/dataset/business-improvement-areas/" target="_blank">Business Improvement Areas (BIA)</a> (same link as in Tutorial 1)</li>
         </ul>
 
         <h4>Projections and re-projecting data</h4>
@@ -257,13 +257,18 @@
         <h4>Select by Location</h4>
 
         <p>
-            This can become more useful when we compare it to other layers. Let's try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>"A_PROPERTY_TYPE"='SOCIAL HOUSING' OR "A_PROPERTY_TYPE"='TCHC'</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total.
+            These buffers can be quite useful when we compare them to other layers. Let's try to find the public housing apartment buildings in Toronto that are not within 1km to a public library. We can do this first by filtering the apartment buildings dataset by their property type <code>"A_PROPERTY_TYPE"='SOCIAL HOUSING' OR "A_PROPERTY_TYPE"='TCHC'</code>. Then go to <i>Vector</i>, <i>Research Tools</i>, then click <i>Select by Location</i>. Here we can select the apartments that intersect the buffers. Inverting this selection will highlight the apartment buildings that are NOT within a 1km from a public library, 144 in total. You can invert the selection by by clicking on the <i>Invert Selection</i> button (the button looks like two interlocking triangles that make a square). This button can be found in the select toolbar at the top of QGIS or after opening the layer's attribute table.
         </p>
         <img src={imgQgisBufferSelect} alt="qgis-bufferselect">
         
         <h4>Spatial Join</h4>
 
-        <p></p>
+        <p>
+            Above we were able to select features in a layer based on their spatial location relative to another layer. We can also use spatial location to join and aggregate data between layers. For example, let's try to count how many apartment buildings there are in each BIA in Toronto.  
+
+            
+
+        </p>
 
 
         
