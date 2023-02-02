@@ -172,7 +172,7 @@
             Let's start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City's server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> (this was copied from the City of Toronto's page linked from above). Also provide a descriptive name for the layer (I called it <code>"Toronto Imagery"</code>)
         </p>
         <p>
-            Now let's add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector"</i>.
+            Now let's add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector</i>.
         </p>
         <p>
             Once added, your map should look something like this:
