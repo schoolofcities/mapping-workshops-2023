@@ -17,5 +17,17 @@
 	"/census-intro": [
 		"src/routes/census-intro/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/census-intro/intro-spatial-data": [
+		"src/routes/census-intro/intro-spatial-data/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/census-intro/about-spatial-data": [
+		"src/routes/census-intro/about-spatial-data/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/census-intro/about-maps-and-spatial-data": [
+		"src/routes/census-intro/about-maps-and-spatial-data/+page.js",
+		"src/routes/+layout.js"
 	]
 }
