@@ -1,3 +1,3 @@
-import * as shared from "../../../src/routes/spatial-analysis-MUI2000/+page.js";
+import * as shared from "../../../src/routes/census-intro/+page.js";
 export { shared };
-export { default as component } from "../../../src/routes/spatial-analysis-MUI2000/+page.svelte";
+export { default as component } from "../../../src/routes/census-intro/+page.svelte";

@@ -4,14 +4,16 @@ export { matchers } from './client-matchers.js';
 	() => import('./nodes/1'),
 	() => import('./nodes/2'),
 	() => import('./nodes/3'),
-	() => import('./nodes/4')];
+	() => import('./nodes/4'),
+	() => import('./nodes/5')];
 
 			export const server_loads = [];
 
 			export const dictionary = {
-	"/spatial-analysis-MUI2000": [2],
-	"/spatial-analysis-MUI2000/GIS-workshop": [3],
-	"/spatial-analysis-MUI2000/intro-spatial-data": [4]
+	"/census-intro": [2],
+	"/spatial-analysis-MUI2000": [3],
+	"/spatial-analysis-MUI2000/GIS-workshop": [4],
+	"/spatial-analysis-MUI2000/intro-spatial-data": [5]
 };
 
 			export const hooks = {

@@ -13,5 +13,9 @@
 	"/spatial-analysis-MUI2000/GIS-workshop": [
 		"src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/census-intro": [
+		"src/routes/census-intro/+page.js",
+		"src/routes/+layout.js"
 	]
 }

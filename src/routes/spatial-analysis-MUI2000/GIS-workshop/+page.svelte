@@ -279,16 +279,6 @@
 
     </div>
 
-    <!-- getting data from OSM -->
-
-    <!-- geocoding -->
-
-    <!-- buffering / dissolving -->
-
-    <!-- network analysis / buffers -->
-
-    <!-- spatial joins -->
-
 
 </main>
 
