@@ -11,8 +11,8 @@ export { matchers } from './client-matchers.js';
 			export const server_loads = [];
 
 			export const dictionary = {
-	"/census-intro": [2],
-	"/census-intro/about-maps-and-spatial-data": [3],
+	"/mapping-census-data": [2],
+	"/mapping-census-data/about-maps-and-spatial-data": [3],
 	"/spatial-analysis-MUI2000": [4],
 	"/spatial-analysis-MUI2000/GIS-workshop": [5],
 	"/spatial-analysis-MUI2000/intro-spatial-data": [6]

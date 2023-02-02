@@ -64,10 +64,12 @@ li {
 a {
     color: var(--brandMedBlue);
     text-decoration: underline;
+    opacity: 1;
     /* font-weight: bold; */
 }
 a:hover {
     color: var(--brandRed);
+    opacity: 0.9;
     /* font-weight: bold; */
 }
 

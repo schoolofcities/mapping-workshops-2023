@@ -212,7 +212,7 @@
 
         <img src={imgQgisRailct} alt="qgis-railct">
 
-        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the censust tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
+        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the census tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
         <p>We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It's often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 

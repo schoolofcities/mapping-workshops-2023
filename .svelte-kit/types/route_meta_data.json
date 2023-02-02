@@ -29,5 +29,13 @@
 	"/census-intro/about-maps-and-spatial-data": [
 		"src/routes/census-intro/about-maps-and-spatial-data/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/mapping-census-data": [
+		"src/routes/mapping-census-data/+page.js",
+		"src/routes/+layout.js"
+	],
+	"/mapping-census-data/about-maps-and-spatial-data": [
+		"src/routes/mapping-census-data/about-maps-and-spatial-data/+page.js",
+		"src/routes/+layout.js"
 	]
 }
