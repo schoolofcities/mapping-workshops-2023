@@ -3,6 +3,7 @@
 	import Top from "../lib/TopSofC.svelte";
 	import '../styles.css';
     import imgTorontoDensity from './assets/toronto-density.png';
+    import imgOntarioFrench from './assets/ontario-french.png';
     import imgOntarioLanguage from './assets/ontario-language.png';
     import imgCensusBoundaries from './assets/census-boundaries-legend-eg.png';
     import imgSpatialData from "./assets/spatial-data.svg"
@@ -57,20 +58,28 @@
         </p>
 
         <p>
-            For example, here's a map of population density in the Greater Toronto Area (GTA), clearly showing where residents are clustered throughout the region. (Click the image to expand).
+            For example, here's a map of population density in the Greater Toronto Area (GTA), clearly showing where people are clustered throughout the region. (Click the image to expand).
         </p>
 
         <a href={imgTorontoDensity} target="_blank"><img src={imgTorontoDensity} alt="toronto-density"></a>
 
         <p>
-            This tutorial covers the following:
+            And here's a simple map of French speakers in Ontario.
+        </p>
+
+        <a href={imgOntarioFrench} target="_blank"><img src={imgOntarioFrench} alt="toronto-french"></a>
+
+        <p>
+            Maps like these are pretty easy to make! Let's learn how.
+        </p>
+        <p>
+            Specifically, this tutorial covers:
         </p>
         <ul class="list">
-            <li>an overview of Canadian census data</li>
-            <li>an overview of spatial data</li>
-            <li>how to find and download census data from Statistics Canada</li>
-            <li>how to explore census data using CensusMapper</li>
-            <li>how to download census data and make custom maps in QGIS</li>
+            <li>an overview of Canadian Census data</li>
+            <li>an overview of maps and spatial data</li>
+            <li>how to explore census data using <a href="https://censusmapper.ca/" target="_blank">CensusMapper</a></li>
+            <li>how to download census data and make custom maps in <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a></li>
         </ul>
     
     </div>
@@ -143,7 +152,7 @@
 
         <h2>Making Census Maps in QGIS</h2>
         <p>
-            While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, grocery stores, etc.). We can do this in desktop GIS software.
+            While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, grocery stores, etc.). We can do this in desktop GIS software like <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a>.
         </p>
         <p>
             Let's open up QGIS and add in some example data that can be downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip" target="_blank">here</a>. 
