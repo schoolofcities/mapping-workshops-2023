@@ -41,9 +41,9 @@
 
         <h1>Mapping Canadian Census Data</h1>
 
-        <p>By Jeff Allen</p>
+        <p>Jeff Allen</p>
 
-        <p>February 3, 2023</p>
+        <p>February, 2023</p>
 
     </div>
 

@@ -116,7 +116,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
             <li><a href="${"https://open.toronto.ca/dataset/bike-share-toronto/"}" target="${"_blank"}">Bike Share Stations</a>. This data are a &quot;live&quot; <code>json</code> feed, I&#39;ve scraped it with this <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/blob/main/data/download-bike-share.py"}" target="${"_blank"}">script</a>, the result can be downloaded from <a href="${"https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/data/bikeshare-stations.geojson"}" target="${"_blank"}" download="${""}">here</a> (if this link doesn&#39;t download directly, you can copy and paste the content into a text editor, or just &quot;save as&quot; the web page).</li></ul>
         <p>Let&#39;s start by loading in the aerial imagery as a base layer. This is a raster dataset (each cell/pixel has a colour value) stored on the City&#39;s server. It can be loaded into QGIS by right-clicking on <i>WMS/WMTS</i> layer in the browser panel and adding a <i>New Connection</i> or by going to <i>Layer</i>, then <i>Data Source Manager</i> and navigating to <i>WMS/WMTS</i>. Once there, add in this URL <code>https://gis.toronto.ca/arcgis/rest/services/basemap/cot_ortho/MapServer/WMTS</code> (this was copied from the City of Toronto&#39;s page linked from above). Also provide a descriptive name for the layer (I called it <code>&quot;Toronto Imagery&quot;</code>)
         </p>
-        <p>Now let&#39;s add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector&quot;</i>.
+        <p>Now let&#39;s add the BIA and CentreLine data. Download these from the links provided above. They can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector</i>.
         </p>
         <p>Once added, your map should look something like this:
         </p>
@@ -145,7 +145,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <img${add_attribute("src", imgQgisRailct, 0)} alt="${"qgis-railct"}">
 
-        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the censust tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
+        <p>Also included is a <code>.csv</code> table which contains data linked to the unique identifier, <code>ctuid</code>, of each census tract. We can use the <code>ctuid</code> to join this tabular data to the spatial boundaries of census tracts. Do so by, first adding the table as a layer into QGIS. Then open up the <i>Properties</i> of the census tract polygon layer, and go to <i>Joins</i>. Add a new join, using <code>ctuid</code> as the source and target fields. Once complete, we can open up the attribute table and see these additional columns.</p>
 
         <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}" target="${"_blank"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Similar to the previous tutorial, open up the layer properties, go to symbology, and style based on graduated symbols.  It&#39;s often preferred to visualize a choropleth as a rate or a density (in terms of people per area) in order not to exaggerate counts in larger areas.</p>
 
@@ -195,16 +195,6 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <img${add_attribute("src", imgQgisCountTable, 0)} alt="${"qgis-counttable"}">
         
         </div>
-
-    
-
-    
-
-    
-
-    
-
-    
 
 
 </main>`;
