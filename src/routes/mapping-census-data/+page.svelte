@@ -54,7 +54,7 @@
         </p>
 
         <p>
-            Most census data are publicly available for download. The data are typically pre-aggregated to geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.). This allows for making maps of census data at a variety of geographic scales.
+            Most census data are publicly available for download. Because of privacy concerns in sharing individual-level data, the data are generally pre-aggregated to geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.). This allows for making maps of census data at a variety of geographic scales.
         </p>
 
         <p>
@@ -87,10 +87,10 @@
     <div id="text">
         <h2>Canadian Census Data</h2>
         <p>
-            There are two parts to the census, the short-form survey and the long-form survey. The short-form survey asks a set of basic household and demographic questions (e.g. address, age, marital status, etc.) and is sent to all dwellings in Canada. The long-from survey is sent to 25% of households in Canada. It asks additional questions pertaining to a broader range of demographic, social, and economic topics (e.g. religion, education, journey to work, etc.). Statistics Canada also augments collected census survey data by joining in data from other administrative sources, including income data collected by the Canadian Revenue Agency (CRA). 
+            There are two parts to the census, the short-form survey and the long-form survey. The short-form survey asks a set of basic household and demographic questions (e.g. address, age, marital status, etc.) and is sent to all households in Canada. The long-from survey is sent to 25% of households in Canada. It asks additional questions pertaining to a broader range of demographic, social, and economic topics (e.g. religion, education, journey to work, etc.). Statistics Canada also augments collected census survey data by joining in data from other administrative sources, including income data collected by the Canadian Revenue Agency (CRA). 
         </p>
         <p>
-            Census data are collected primarily on a household-by-household basis (one adult member in each household usually fills out the census on behalf of everyone in the household). Data of individual responses from the census are often called census "micro-data". Because of privacy and personal identification concerns, this data is only accessible by accredited researchers. (A public use microdata file called the PUMF is available. It is a random sample of the overall population, with several of the identifying variables removed, such as home addresses and postal code).
+            Census data are collected primarily on a household-by-household basis (one adult member in each household usually fills out the census on behalf of everyone in the household). Data of individual responses from the census are often called census "micro-data". Because of personal identification concerns, this data is only accessible by accredited researchers. (A public use microdata file called the PUMF is available thought. It is a random sample of the overall population, with several of the identifying variables removed, such as home addresses and postal code).
         </p>
         <p>
             Summaries (i.e. aggregations) of census data to a range of geographic units are publicly available to view online or download. These are super useful for understanding the demographics of a place. For example, the total population in a province, the number of people who speak Spanish in Toronto, or the average income in a specific neighbourhood. The <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E" target="_blank">Census Profile</a> tables on Statistics Canada's website allows for searching for census data for specific variables and geographic areas. For example, here's an output of "Knowledge of Official Languages" in Ontario.
