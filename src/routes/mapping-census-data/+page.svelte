@@ -33,7 +33,7 @@
     <meta name="og:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/main/src/routes/assets/web-card-3.png" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/src/routes/mapping-census-data/assets/census-map-eg.png" />
     <meta property="og:locale" content="en_CA">
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -41,7 +41,7 @@
     <meta name="twitter:creator" content="@JeffAllenMaps" />
     <meta name="twitter:title" content="Mapping Canadian Census Data" />
     <meta name="twitter:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/main/src/routes/assets/web-card-3.png" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/src/routes/mapping-census-data/assets/census-map-eg.png" />
 
 </svelte:head>
 
