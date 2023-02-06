@@ -26,8 +26,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 
     <title>Mapping Canadian Census Data</title>
-    <meta name="description" content="Mapping Canadian Census Data">
+    <meta name="description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS">
     <meta name="author" content="Jeff Allen">
+
+    <meta property="og:title" content="Mapping Canadian Census Data"/>
+    <meta name="og:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/main/src/routes/assets/web-card-3.png" />
+    <meta property="og:locale" content="en_CA">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data" />
+    <meta name="twitter:creator" content="@JeffAllenMaps" />
+    <meta name="twitter:title" content="Mapping Canadian Census Data" />
+    <meta name="twitter:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/schoolofcities/place-and-politics-toronto/main/src/routes/assets/web-card-3.png" />
 
 </svelte:head>
 
@@ -41,7 +55,7 @@
 
         <h1>Mapping Canadian Census Data</h1>
 
-        <p>Jeff Allen</p>
+        <p><a href="https://jamaps.github.io/" target="_blank">Jeff Allen</a></p>
 
         <p>February, 2023</p>
 
@@ -54,7 +68,7 @@
         </p>
 
         <p>
-            Most census data are publicly available for download. Because of privacy concerns in sharing individual-level data, the data are generally pre-aggregated to geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.). This allows for making maps of census data at a variety of geographic scales.
+            Lots of census data are publicly available for download. Most data are pre-aggregated to a variety of geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.), which allow for making a range of maps.
         </p>
 
         <p>
@@ -100,7 +114,7 @@
             The are a number of <a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/ref/index-eng.cfm" target="_blank">geographic boundaries</a> available, ranging in scale from city blocks to the entire country. Below is an example of commonly used boundaries for urban-scale maps and analysis.
         </p>
         <p>
-            Each polygon on this map has associated summary census data. Joining this data to these spatial boundaries allows for making a wide range of maps showing the distribution demographics and socio-economic variables.
+            Each polygon on this map has associated summary census data. Joining this tabular data to these spatial boundaries allows for making a wide range of maps showing the distribution demographics and socio-economic variables.
         </p>
         <a href={imgCensusBoundaries} target="_blank"><img src={imgCensusBoundaries} alt="census-boundaries"></a>
 
@@ -126,7 +140,7 @@
             Geographic Information System (GIS) are tools and software for working with spatial data. We can use GIS to make maps and visualize spatial data, but also for a number of data processing and analytical tasks (e.g. we can count how many people live within 1km of a public library). There is a wide range of GIS software available, some cost money, others are free. The mostly widely used free and open-source desktop GIS software is <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a>. 
         </p>
         <p>
-            There are also an increasing number of interactive maps and web-GIS tools available. One of which is <a href="https://censusmapper.ca/" target="_blank">CensusMapper</a>, built for visualizing and downloading Canadian census data.
+            There are also an increasing number of interactive maps and web-GIS tools available online that are built for specific use-cases. One of which is <a href="https://censusmapper.ca/" target="_blank">CensusMapper</a>, built for visualizing and downloading Canadian census data.
         </p>
         
     </div>
@@ -152,12 +166,12 @@
 
         <h2>Making Census Maps in QGIS</h2>
         <p>
-            While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, grocery stores, etc.). We can do this in desktop GIS software like <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a>.
+            While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, or grocery stores, etc.). We can do this in desktop GIS software like <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a>.
         </p>
         <p>
             Let's open up QGIS and add in some example data that can be downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip" target="_blank">here</a>. 
         </p>
-        <p>    
+        <p>
             This is the 'empty' view of QGIS when it's first opened. The "Browser" on the left allows for navigating and loading datasets. The "Layers" panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
         </p>
         <img src={imgQgisBlank} alt="qgis-blank">
@@ -177,7 +191,7 @@
             We can now visualize these polygons as a <a href="https://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Open up the layer <i>Properties</i>, go to <i>Symbology</i>, and style based on <i>Graduated symbols</i>. It's often preferred to visualize a choropleth as a percent or a density (in terms of people per area) in order not to exaggerate counts in larger areas.
         </p>
         <p>
-            (Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).
+            (Note that a numeric column like population or median income might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).
         </p>
         <p>
             For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood relative to major transit lines.
