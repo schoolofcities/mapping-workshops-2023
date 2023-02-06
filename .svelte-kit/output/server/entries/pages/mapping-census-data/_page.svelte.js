@@ -10,7 +10,7 @@ const imgTorontoPortuguese = "/mapping-workshops-2023/_app/immutable/assets/port
 const imgQgisBlank = "/mapping-workshops-2023/_app/immutable/assets/qgis-blank-c49863c8.png";
 const imgQgisChoropleth = "/mapping-workshops-2023/_app/immutable/assets/qgis-choropleth-81a06853.png";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `<!-- HEAD_svelte-16yypce_START --><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin><link href="${"https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"}" rel="${"stylesheet"}"><link href="${"https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"}" rel="${"stylesheet"}"><meta name="${"viewport"}" content="${"width=device-width, initial-scale=1, minimum-scale=1"}">${$$result.title = `<title>Mapping Canadian Census Data</title>`, ""}<meta name="${"description"}" content="${"Mapping Canadian Census Data"}"><meta name="${"author"}" content="${"Jeff Allen"}"><!-- HEAD_svelte-16yypce_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-fdutge_START --><link rel="${"preconnect"}" href="${"https://fonts.googleapis.com"}"><link rel="${"preconnect"}" href="${"https://fonts.gstatic.com"}" crossorigin><link href="${"https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"}" rel="${"stylesheet"}"><link href="${"https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+Pro&display=swap"}" rel="${"stylesheet"}"><meta name="${"viewport"}" content="${"width=device-width, initial-scale=1, minimum-scale=1"}">${$$result.title = `<title>Mapping Canadian Census Data</title>`, ""}<meta name="${"description"}" content="${"An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS"}"><meta name="${"author"}" content="${"Jeff Allen"}"><meta property="${"og:title"}" content="${"Mapping Canadian Census Data"}"><meta name="${"og:description"}" content="${"An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS"}"><meta property="${"og:type"}" content="${"website"}"><meta property="${"og:url"}" content="${"https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data"}"><meta property="${"og:image"}" content="${"https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/src/routes/mapping-census-data/assets/census-map-eg.png"}"><meta property="${"og:locale"}" content="${"en_CA"}"><meta name="${"twitter:card"}" content="${"summary_large_image"}"><meta name="${"twitter:site"}" content="${"https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data"}"><meta name="${"twitter:creator"}" content="${"@JeffAllenMaps"}"><meta name="${"twitter:title"}" content="${"Mapping Canadian Census Data"}"><meta name="${"twitter:description"}" content="${"An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS"}"><meta name="${"twitter:image"}" content="${"https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/src/routes/mapping-census-data/assets/census-map-eg.png"}"><!-- HEAD_svelte-fdutge_END -->`, ""}
 
 
 
@@ -18,14 +18,14 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
 <main><div id="${"title"}"><h1>Mapping Canadian Census Data</h1>
 
-        <p>Jeff Allen</p>
+        <p><a href="${"https://jamaps.github.io/"}" target="${"_blank"}">Jeff Allen</a></p>
 
         <p>February, 2023</p></div>
 
     <div id="${"text"}"><p><a href="${"https://www12.statcan.gc.ca/census-recensement/index-eng.cfm"}" target="${"_blank"}">Statistics Canada</a> conducts a national census of the population every five years, asking a range of demographic and socio-economic questions. The most recent census was in 2021. 
         </p>
 
-        <p>Most census data are publicly available for download. Because of privacy concerns in sharing individual-level data, the data are generally pre-aggregated to geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.). This allows for making maps of census data at a variety of geographic scales.
+        <p>Lots of census data are publicly available for download. Most data are pre-aggregated to a variety of geographic boundaries (e.g. provinces, cities, neighbourhoods, blocks, etc.), which allow for making a range of maps.
         </p>
 
         <p>For example, here&#39;s a map of population density in the Greater Toronto Area (GTA), clearly showing where people are clustered throughout the region. (Click the image to expand).
@@ -57,7 +57,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?LANG=E&GENDERlist=1,2,3&STATISTIClist=1&DGUIDlist=2021A000235&HEADERlist=,15,13,18,12,16,14,17&SearchText=Ontario"}" target="${"_blank"}"><img${add_attribute("src", imgOntarioLanguage, 0)} alt="${"ontario-language"}"></a>
         <p>The are a number of <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/ref/index-eng.cfm"}" target="${"_blank"}">geographic boundaries</a> available, ranging in scale from city blocks to the entire country. Below is an example of commonly used boundaries for urban-scale maps and analysis.
         </p>
-        <p>Each polygon on this map has associated summary census data. Joining this data to these spatial boundaries allows for making a wide range of maps showing the distribution demographics and socio-economic variables.
+        <p>Each polygon on this map has associated summary census data. Joining this tabular data to these spatial boundaries allows for making a wide range of maps showing the distribution demographics and socio-economic variables.
         </p>
         <a${add_attribute("href", imgCensusBoundaries, 0)} target="${"_blank"}"><img${add_attribute("src", imgCensusBoundaries, 0)} alt="${"census-boundaries"}"></a></div>
     <div id="${"text"}"><h2>Spatial Data, GIS, and Cartography</h2>
@@ -74,7 +74,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <a${add_attribute("href", imgToronto1909, 0)} target="${"_blank"}"><img${add_attribute("src", imgToronto1909, 0)} alt="${"toronto-1909"}"></a>
         <p>Geographic Information System (GIS) are tools and software for working with spatial data. We can use GIS to make maps and visualize spatial data, but also for a number of data processing and analytical tasks (e.g. we can count how many people live within 1km of a public library). There is a wide range of GIS software available, some cost money, others are free. The mostly widely used free and open-source desktop GIS software is <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>. 
         </p>
-        <p>There are also an increasing number of interactive maps and web-GIS tools available. One of which is <a href="${"https://censusmapper.ca/"}" target="${"_blank"}">CensusMapper</a>, built for visualizing and downloading Canadian census data.
+        <p>There are also an increasing number of interactive maps and web-GIS tools available online that are built for specific use-cases. One of which is <a href="${"https://censusmapper.ca/"}" target="${"_blank"}">CensusMapper</a>, built for visualizing and downloading Canadian census data.
         </p></div>
 
     <div id="${"text"}"><h2>Using CensusMapper</h2>
@@ -89,7 +89,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         </p></div>
 
     <div id="${"text"}"><h2>Making Census Maps in QGIS</h2>
-        <p>While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, grocery stores, etc.). We can do this in desktop GIS software like <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>.
+        <p>While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, or grocery stores, etc.). We can do this in desktop GIS software like <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>.
         </p>
         <p>Let&#39;s open up QGIS and add in some example data that can be downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip"}" target="${"_blank"}">here</a>. 
         </p>
@@ -106,7 +106,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         </p>
         <p>We can now visualize these polygons as a <a href="${"https://en.wikipedia.org/wiki/Choropleth_map"}" target="${"_blank"}">choropleth map</a> (maps where polygons are shaded by numeric attribute values). Open up the layer <i>Properties</i>, go to <i>Symbology</i>, and style based on <i>Graduated symbols</i>. It&#39;s often preferred to visualize a choropleth as a percent or a density (in terms of people per area) in order not to exaggerate counts in larger areas.
         </p>
-        <p>(Note that a numeric column might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).
+        <p>(Note that a numeric column like population or median income might be imported as a string. If this is the case, to convert to a number to visualize, click on the epsilon on the top-right, and use the <code>to_real()</code> function to convert to a numeric value).
         </p>
         <p>For example, the following shows a choropleth map of the percent of people who live in low-income households by neighbourhood relative to major transit lines.
         </p>
