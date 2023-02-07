@@ -30,7 +30,7 @@
     <meta name="author" content="Jeff Allen">
 
     <meta property="og:title" content="Mapping Canadian Census Data"/>
-    <meta name="og:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
+    <meta property="og:description" content="An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://schoolofcities.github.io/mapping-workshops-2023/mapping-census-data" />
     <meta property="og:image" content="https://raw.githubusercontent.com/schoolofcities/mapping-workshops-2023/main/src/routes/mapping-census-data/assets/census-map-eg.png" />
