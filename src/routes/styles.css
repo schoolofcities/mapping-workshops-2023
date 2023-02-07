@@ -90,7 +90,6 @@ i {
     padding: 2px;
 }
 
-
 #title {
     margin: 0 auto;
     min-height: 1px;
@@ -100,6 +99,7 @@ i {
     border-bottom: solid 1px black;
     padding: 30px;
     text-align: center;
+    line-height: 30px;
 }
 
 #text {

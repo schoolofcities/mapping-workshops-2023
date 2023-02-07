@@ -55,6 +55,8 @@
 
         <h1>Mapping Canadian Census Data</h1>
 
+        <p>An introductory tutorial for creating maps of Canadian Census data using CensusMapper and QGIS</p>
+
         <p><a href="https://jamaps.github.io/" target="_blank">Jeff Allen</a></p>
 
         <p>February, 2023</p>
