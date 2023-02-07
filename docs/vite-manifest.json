@@ -11,29 +11,29 @@
     "file": "_app/immutable/assets/qgis-blank-c49863c8.png",
     "src": "src/routes/mapping-census-data/assets/qgis-blank.png"
   },
-  "src/routes/mapping-census-data/assets/qgis-choropleth.png": {
-    "file": "_app/immutable/assets/qgis-choropleth-81a06853.png",
-    "src": "src/routes/mapping-census-data/assets/qgis-choropleth.png"
-  },
-  "src/routes/mapping-census-data/assets/ontario-french.png": {
-    "file": "_app/immutable/assets/ontario-french-fdd4ab53.png",
-    "src": "src/routes/mapping-census-data/assets/ontario-french.png"
-  },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/coords.png": {
     "file": "_app/immutable/assets/coords-8d7033f1.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/coords.png"
-  },
-  "src/routes/mapping-census-data/assets/portuguese-toronto.png": {
-    "file": "_app/immutable/assets/portuguese-toronto-16fe25e7.png",
-    "src": "src/routes/mapping-census-data/assets/portuguese-toronto.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png": {
     "file": "_app/immutable/assets/dem-toronto-c547fdc3.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/dem-toronto.png"
   },
+  "src/routes/mapping-census-data/assets/qgis-choropleth.png": {
+    "file": "_app/immutable/assets/qgis-choropleth-81a06853.png",
+    "src": "src/routes/mapping-census-data/assets/qgis-choropleth.png"
+  },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png": {
     "file": "_app/immutable/assets/osm-college-bf243ca2.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/osm-college.png"
+  },
+  "src/routes/mapping-census-data/assets/ontario-french.png": {
+    "file": "_app/immutable/assets/ontario-french-fdd4ab53.png",
+    "src": "src/routes/mapping-census-data/assets/ontario-french.png"
+  },
+  "src/routes/mapping-census-data/assets/portuguese-toronto.png": {
+    "file": "_app/immutable/assets/portuguese-toronto-16fe25e7.png",
+    "src": "src/routes/mapping-census-data/assets/portuguese-toronto.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/gis-layers.png": {
     "file": "_app/immutable/assets/gis-layers-479f3a99.png",
@@ -42,6 +42,10 @@
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png": {
     "file": "_app/immutable/assets/qgis-railct-8ad297f5.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-railct.png"
+  },
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-counttable.png": {
+    "file": "_app/immutable/assets/qgis-counttable-b4c24b31.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-counttable.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-buffer.png": {
     "file": "_app/immutable/assets/qgis-buffer-9fdd946a.png",
@@ -55,9 +59,9 @@
     "file": "_app/immutable/assets/qgis-centre-db6f5d95.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-centre.png"
   },
-  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-counttable.png": {
-    "file": "_app/immutable/assets/qgis-counttable-b4c24b31.png",
-    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-counttable.png"
+  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png": {
+    "file": "_app/immutable/assets/qgis-bufferselect-b78dff64.png",
+    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-layers1.png": {
     "file": "_app/immutable/assets/qgis-layers1-2075521d.png",
@@ -66,10 +70,6 @@
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bikeshare.png": {
     "file": "_app/immutable/assets/qgis-bikeshare-2fd27b69.png",
     "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bikeshare.png"
-  },
-  "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png": {
-    "file": "_app/immutable/assets/qgis-bufferselect-b78dff64.png",
-    "src": "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-bufferselect.png"
   },
   "src/routes/assets/top-logo.svg": {
     "file": "_app/immutable/assets/top-logo-ed729436.svg",
@@ -88,12 +88,12 @@
     "src": "src/routes/assets/Trade Gothic LT Bold.ttf"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-c10cacff.js",
+    "file": "_app/immutable/start-0e25074e.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-a8a08db8.js",
-      "_singletons-0250d667.js"
+      "_singletons-80868d48.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
@@ -101,8 +101,7 @@
       ".svelte-kit/generated/nodes/2.js",
       ".svelte-kit/generated/nodes/3.js",
       ".svelte-kit/generated/nodes/4.js",
-      ".svelte-kit/generated/nodes/5.js",
-      ".svelte-kit/generated/nodes/6.js"
+      ".svelte-kit/generated/nodes/5.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
@@ -114,12 +113,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-3366e67f.js",
+    "file": "_app/immutable/components/error.svelte-123b37da.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-a8a08db8.js",
-      "_singletons-0250d667.js"
+      "_singletons-80868d48.js"
     ]
   },
   "src/routes/mapping-census-data/+page.svelte": {
@@ -143,18 +142,6 @@
       "_app/immutable/assets/portuguese-toronto-16fe25e7.png",
       "_app/immutable/assets/qgis-blank-c49863c8.png",
       "_app/immutable/assets/qgis-choropleth-81a06853.png"
-    ]
-  },
-  "src/routes/mapping-census-data/about-maps-and-spatial-data/+page.svelte": {
-    "file": "_app/immutable/components/pages/mapping-census-data/about-maps-and-spatial-data/_page.svelte-895b0414.js",
-    "src": "src/routes/mapping-census-data/about-maps-and-spatial-data/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-a8a08db8.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-250bdaba.css",
-      "_app/immutable/assets/styles-cfa002d8.css"
     ]
   },
   "src/routes/spatial-analysis-MUI2000/+page.svelte": {
@@ -224,14 +211,6 @@
       "__page-321755fa.js"
     ]
   },
-  "src/routes/mapping-census-data/about-maps-and-spatial-data/+page.js": {
-    "file": "_app/immutable/modules/pages/mapping-census-data/about-maps-and-spatial-data/_page.js-a7c157c7.js",
-    "src": "src/routes/mapping-census-data/about-maps-and-spatial-data/+page.js",
-    "isEntry": true,
-    "imports": [
-      "__page-db1473ad.js"
-    ]
-  },
   "src/routes/spatial-analysis-MUI2000/+page.js": {
     "file": "_app/immutable/modules/pages/spatial-analysis-MUI2000/_page.js-e4dde7b4.js",
     "src": "src/routes/spatial-analysis-MUI2000/+page.js",
@@ -256,8 +235,8 @@
       "__page-32babd19.js"
     ]
   },
-  "_singletons-0250d667.js": {
-    "file": "_app/immutable/chunks/singletons-0250d667.js",
+  "_singletons-80868d48.js": {
+    "file": "_app/immutable/chunks/singletons-80868d48.js",
     "imports": [
       "_index-a8a08db8.js"
     ]
@@ -283,9 +262,6 @@
   "__page-321755fa.js": {
     "file": "_app/immutable/chunks/_page-321755fa.js"
   },
-  "__page-db1473ad.js": {
-    "file": "_app/immutable/chunks/_page-db1473ad.js"
-  },
   "__page-49c99631.js": {
     "file": "_app/immutable/chunks/_page-49c99631.js"
   },
@@ -305,7 +281,7 @@
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-1d8c3c3a.js",
+    "file": "_app/immutable/chunks/1-01e73065.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -322,40 +298,35 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-e6000899.js",
+    "file": "_app/immutable/chunks/3-3c7af25b.js",
     "src": ".svelte-kit/generated/nodes/3.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-db1473ad.js",
-      "src/routes/mapping-census-data/about-maps-and-spatial-data/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-038fbfba.js",
-    "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
       "__page-49c99631.js",
       "src/routes/spatial-analysis-MUI2000/+page.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-f738b764.js",
-    "src": ".svelte-kit/generated/nodes/5.js",
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-5e00053f.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
     "isDynamicEntry": true,
     "imports": [
       "__page-7d1d4778.js",
       "src/routes/spatial-analysis-MUI2000/GIS-workshop/+page.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-565d2951.js",
-    "src": ".svelte-kit/generated/nodes/6.js",
+  ".svelte-kit/generated/nodes/5.js": {
+    "file": "_app/immutable/chunks/5-6e4232cf.js",
+    "src": ".svelte-kit/generated/nodes/5.js",
     "isDynamicEntry": true,
     "imports": [
       "__page-32babd19.js",
       "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.svelte"
     ]
+  },
+  "TopSofC.css": {
+    "file": "_app/immutable/assets/TopSofC-4f9d6b8c.css",
+    "src": "TopSofC.css"
   },
   "src/routes/spatial-analysis-MUI2000/intro-spatial-data/+page.css": {
     "file": "_app/immutable/assets/_page-250bdaba.css",
@@ -364,10 +335,6 @@
   "styles.css": {
     "file": "_app/immutable/assets/styles-cfa002d8.css",
     "src": "styles.css"
-  },
-  "TopSofC.css": {
-    "file": "_app/immutable/assets/TopSofC-4f9d6b8c.css",
-    "src": "TopSofC.css"
   },
   "src/routes/spatial-analysis-MUI2000/GIS-workshop/assets/qgis-blank.png": {
     "file": "_app/immutable/assets/qgis-blank-c49863c8.png",
