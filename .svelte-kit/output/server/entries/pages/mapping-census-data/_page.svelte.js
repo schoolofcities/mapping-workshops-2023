@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component, d as add_attribute } from "../../../chunks/index.js";
 import { T as TopSofC } from "../../../chunks/TopSofC.js";
 /* empty css                      */const imgTorontoDensity = "/mapping-workshops-2023/_app/immutable/assets/toronto-density-33b1c910.png";
-const imgOntarioFrench = "/mapping-workshops-2023/_app/immutable/assets/ontario-french-fdd4ab53.png";
+const imgOntarioFrench = "/mapping-workshops-2023/_app/immutable/assets/ontario-french-a86bc40b.png";
 const imgOntarioLanguage = "/mapping-workshops-2023/_app/immutable/assets/ontario-language-dbd21b05.png";
 const imgCensusBoundaries = "/mapping-workshops-2023/_app/immutable/assets/census-boundaries-legend-eg-69844584.png";
 const imgSpatialData = "/mapping-workshops-2023/_app/immutable/assets/spatial-data-2dcc30b3.svg";
@@ -52,14 +52,14 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
     <div id="${"text"}"><h2>Canadian Census Data</h2>
         <p>There are two parts to the census, the short-form survey and the long-form survey. The short-form survey asks a set of basic household and demographic questions (e.g. address, age, marital status, etc.) and is sent to all households in Canada. The long-from survey is sent to 25% of households in Canada. It asks additional questions pertaining to a broader range of demographic, social, and economic topics (e.g. religion, education, journey to work, etc.). Statistics Canada also augments collected census survey data by joining in data from other administrative sources, including income data collected by the Canadian Revenue Agency (CRA). 
         </p>
-        <p>Census data are collected primarily on a household-by-household basis (one adult member in each household usually fills out the census on behalf of everyone in the household). Data of individual responses from the census are often called census &quot;micro-data&quot;. Because of personal identification concerns, this data is only accessible by accredited researchers. (A public use microdata file called the PUMF is available thought. It is a random sample of the overall population, with several of the identifying variables removed, such as home addresses and postal code).
+        <p>Census data are collected primarily on a household-by-household basis (one adult member in each household usually fills out the census on behalf of everyone in the household). Data of individual responses from the census are often called census &quot;micro-data&quot;. Because of personal identification concerns, this data is only accessible by accredited researchers. (A public use microdata file called the PUMF is available though. It is a random sample of the overall population, with several of the identifying variables removed, such as home addresses and postal code).
         </p>
-        <p>Summaries (i.e. aggregations) of census data to a range of geographic units are publicly available to view online or download. These are super useful for understanding the demographics of a place. For example, the total population in a province, the number of people who speak Spanish in Toronto, or the average income in a specific neighbourhood. The <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E"}" target="${"_blank"}">Census Profile</a> tables on Statistics Canada&#39;s website allows for searching for census data for specific variables and geographic areas. For example, here&#39;s an output of &quot;Knowledge of Official Languages&quot; in Ontario.
+        <p>Summaries (i.e. aggregations) of census data to a range of geographic units are publicly available to view online or download. These are super useful for understanding the demographics of a place. For example, the total population in a province, the number of people who speak Spanish in Toronto, or the average income in a specific neighbourhood. The <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E"}" target="${"_blank"}">Census Profile</a> tables on Statistics Canada&#39;s website allow for searching for census data for specific variables and geographic areas. For example, here&#39;s an output of &quot;Knowledge of Official Languages&quot; in Ontario.
         </p>
         <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?LANG=E&GENDERlist=1,2,3&STATISTIClist=1&DGUIDlist=2021A000235&HEADERlist=,15,13,18,12,16,14,17&SearchText=Ontario"}" target="${"_blank"}"><img${add_attribute("src", imgOntarioLanguage, 0)} alt="${"ontario-language"}"></a>
-        <p>The are a number of <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/ref/index-eng.cfm"}" target="${"_blank"}">geographic boundaries</a> available, ranging in scale from city blocks to the entire country. Below is an example of commonly used boundaries for urban-scale maps and analysis.
+        <p>The are a number of <a href="${"https://www12.statcan.gc.ca/census-recensement/2021/geo/ref/index-eng.cfm"}" target="${"_blank"}">geographic boundaries</a> available with associated census data, ranging in scale from city blocks to the entire country. Below is an example of commonly used boundaries for urban-scale maps and analysis.
         </p>
-        <p>Each polygon on this map has associated summary census data. Joining this tabular data to these spatial boundaries allows for making a wide range of maps showing the distribution demographics and socio-economic variables.
+        <p>Each polygon on this map has associated summary census data. Joining this tabular data to these spatial boundaries allows for making a wide range of maps showing the distribution of demographics and socio-economic variables.
         </p>
         <a${add_attribute("href", imgCensusBoundaries, 0)} target="${"_blank"}"><img${add_attribute("src", imgCensusBoundaries, 0)} alt="${"census-boundaries"}"></a></div>
     <div id="${"text"}"><h2>Spatial Data, GIS, and Cartography</h2>
@@ -74,7 +74,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <p>Cartography is the art and science of creating maps. Maps are a combination of spatial data layered on top of each other. Good cartography requires careful thought about how to symbolize each layer, to aid communication, and to be in harmony with other layers on the map. Check out historical map below of the Toronto Harbour from 1909, each type of feature (water, railways, etc.) has its own carefully chosen symbology.
         </p>
         <a${add_attribute("href", imgToronto1909, 0)} target="${"_blank"}"><img${add_attribute("src", imgToronto1909, 0)} alt="${"toronto-1909"}"></a>
-        <p>Geographic Information System (GIS) are tools and software for working with spatial data. We can use GIS to make maps and visualize spatial data, but also for a number of data processing and analytical tasks (e.g. we can count how many people live within 1km of a public library). There is a wide range of GIS software available, some cost money, others are free. The mostly widely used free and open-source desktop GIS software is <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>. 
+        <p>Geographic Information Systems (GIS) are tools and software for working with spatial data. We can use GIS to make maps and visualize spatial data, but also for a number of data processing and analytical tasks (e.g. we can count how many people live within 1km of a public library). There is a wide range of GIS software available, some cost money, others are free. The mostly widely used free and open-source desktop GIS software is <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>. 
         </p>
         <p>There are also an increasing number of interactive maps and web-GIS tools available online that are built for specific use-cases. One of which is <a href="${"https://censusmapper.ca/"}" target="${"_blank"}">CensusMapper</a>, built for visualizing and downloading Canadian census data.
         </p></div>
@@ -98,7 +98,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <p>This is the &#39;empty&#39; view of QGIS when it&#39;s first opened. The &quot;Browser&quot; on the left allows for navigating and loading datasets. The &quot;Layers&quot; panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
         </p>
         <img${add_attribute("src", imgQgisBlank, 0)} alt="${"qgis-blank"}">
-        <p>In the download link above, we have a line layer representing major transit lines in Toronto (<code>ttc_routes.geojson</code>) and a point layer representing transit stations (<code>ttc_stops.geojson</code>). Vector data like this can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector</i>.
+        <p>In the download link above, we have a line layer representing major transit lines in Toronto (<code>ttc_routes.geojson</code>) and a point layer representing transit stations (<code>ttc_stops.geojson</code>). Vector data like this can be added into QGIS either by dragging and dropping them from your file manager onto the map or layers panel. Or they can be added by going to <i>Layer</i>, then <i>Data Source Manager</i>, and navigating to <i>Vector</i>.
         </p>
         <p>There are a number of ways we can symbolize this data. If we right click a layer in the layers panel, go to <i>Properties</i>, and then <i>Symbology</i>, there are lots of options to choose from.
         </p>
@@ -116,7 +116,10 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
         <img${add_attribute("src", imgQgisChoropleth, 0)} alt="${"qgis-choropleth"}">
 
         <p>The legend and scale bar were added by going to <i>Project</i>, selecting <i>New Print Layout</i>, and then adding in a map view, legend, and scale bar to the blank page.
-        </p></div>
+        </p>
+
+        <br>
+        <br></div>
 
 </main>`;
 });
