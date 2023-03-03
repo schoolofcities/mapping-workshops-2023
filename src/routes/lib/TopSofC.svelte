@@ -1,5 +1,5 @@
 <script>
-	import logo from '../assets/top-logo.svg';
+	import logo from '../assets/top-logo-full.svg';
 </script>
 
 <div id="bar">
@@ -18,20 +18,19 @@
 		height: 50px;
 		background-color: white;
 		margin-bottom: 20px;
-		border-bottom: solid 1px black;
+		border-bottom: solid 1px rgb(64, 64, 64);
 		width: 100%;
 		min-width: 200px;
 		padding-left: 0px;
 		padding-right: 0px;
-		/* text-align: center; */
 		z-index: 5;
 		opacity: 0.92;
-		/* box-shadow: 0 2px 0 0 var(--brandLightBlue); */
 	}
 
 	#logo {
 		margin: auto;
-		max-width: 142px;
+		max-width: 230px;
+		height: 50px;
 		/* background-color: aquamarine; */
 	}
 
@@ -43,9 +42,11 @@
 	}
 
 	img {
+		height: 50px;
 		color: blue;
 	}
 	img:hover {
+		height: 50px;
 		opacity: 0.5;
 		cursor: pointer;
 	}
