@@ -37,5 +37,9 @@
 	"/mapping-census-data/about-maps-and-spatial-data": [
 		"src/routes/mapping-census-data/about-maps-and-spatial-data/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/bivariate-maps": [
+		"src/routes/bivariate-maps/+page.js",
+		"src/routes/+layout.js"
 	]
 }

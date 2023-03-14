@@ -1,3 +1,3 @@
-import * as shared from "../../../src/routes/mapping-census-data/+page.js";
+import * as shared from "../../../src/routes/bivariate-maps/+page.js";
 export { shared };
-export { default as component } from "../../../src/routes/mapping-census-data/+page.svelte";
+export { default as component } from "../../../src/routes/bivariate-maps/+page.svelte";
