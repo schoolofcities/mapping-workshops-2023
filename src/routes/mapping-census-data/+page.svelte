@@ -171,7 +171,7 @@
             While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, or grocery stores, etc.). We can do this in desktop GIS software like <a href="https://www.qgis.org/en/site/" target="_blank">QGIS</a>.
         </p>
         <p>
-            Let's open up QGIS and add in some example data that can be downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip" target="_blank">here</a>. 
+            Let's open up QGIS and add in some example data that can be downloaded from <a href="https://github.com/schoolofcities/mapping-workshops-2023/raw/main/notebooks/mapping-census-data/mapping-census-data.zip" target="_blank">here</a>. 
         </p>
         <p>
             This is the 'empty' view of QGIS when it's first opened. The "Browser" on the left allows for navigating and loading datasets. The "Layers" panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
