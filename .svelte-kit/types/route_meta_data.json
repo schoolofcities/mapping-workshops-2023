@@ -41,5 +41,9 @@
 	"/bivariate-maps": [
 		"src/routes/bivariate-maps/+page.js",
 		"src/routes/+layout.js"
+	],
+	"/qgis-intro": [
+		"src/routes/qgis-intro/+page.js",
+		"src/routes/+layout.js"
 	]
 }

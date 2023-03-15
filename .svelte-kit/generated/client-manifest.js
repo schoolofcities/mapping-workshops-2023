@@ -6,16 +6,18 @@ export { matchers } from './client-matchers.js';
 	() => import('./nodes/3'),
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
-	() => import('./nodes/6')];
+	() => import('./nodes/6'),
+	() => import('./nodes/7')];
 
 			export const server_loads = [];
 
 			export const dictionary = {
 	"/bivariate-maps": [2],
 	"/mapping-census-data": [3],
-	"/spatial-analysis-MUI2000": [4],
-	"/spatial-analysis-MUI2000/GIS-workshop": [5],
-	"/spatial-analysis-MUI2000/intro-spatial-data": [6]
+	"/qgis-intro": [4],
+	"/spatial-analysis-MUI2000": [5],
+	"/spatial-analysis-MUI2000/GIS-workshop": [6],
+	"/spatial-analysis-MUI2000/intro-spatial-data": [7]
 };
 
 			export const hooks = {
