@@ -93,7 +93,7 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
     <div id="${"text"}"><h2>Making Census Maps in QGIS</h2>
         <p>While CensusMapper (and other online tools like it) are great for exploring and downloading data, we often want to make more customized maps (e.g. for a report, a paper, a website, etc.) or analyze census data in conjunction with other data sources (e.g. comparing  demographic data to the location of libraries, public transit, or grocery stores, etc.). We can do this in desktop GIS software like <a href="${"https://www.qgis.org/en/site/"}" target="${"_blank"}">QGIS</a>.
         </p>
-        <p>Let&#39;s open up QGIS and add in some example data that can be downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/data/toronto.zip"}" target="${"_blank"}">here</a>. 
+        <p>Let&#39;s open up QGIS and add in some example data that can be downloaded from <a href="${"https://github.com/schoolofcities/mapping-workshops-2023/raw/main/notebooks/mapping-census-data/mapping-census-data.zip"}" target="${"_blank"}">here</a>. 
         </p>
         <p>This is the &#39;empty&#39; view of QGIS when it&#39;s first opened. The &quot;Browser&quot; on the left allows for navigating and loading datasets. The &quot;Layers&quot; panel will populate with each dataset that is added to the project. And the big blank square is where your map data will be visualized.
         </p>
