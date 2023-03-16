@@ -5,6 +5,7 @@ channels:
 dependencies:
   - geopandas=0.9.0=py_1
   - geopandas-base=0.9.0=py_1
+  - mapclassify=2.5.0=py310h06a4308_0
   - matplotlib-base=3.7.1=py310h1128e8f_0
   - matplotlib-inline=0.1.6=py310h06a4308_0
   - pandas=1.5.3=py310h1128e8f_0
