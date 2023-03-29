@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    sodipodi:docname="inkscape-map.svg"
-   inkscape:export-filename="/home/ja/Dropbox/sofc/teaching/mapping-workshops-2023/notebooks/dasymetric-dot-maps/images/dot-map.png"
+   inkscape:export-filename="/home/ja/Dropbox/sofc/teaching/mapping-workshops-2023/notebooks/dasymetric-dot-maps/images/toronto-housing-dot-map.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -30,11 +30,11 @@
      units="in"
      width="10in"
      inkscape:snap-page="true"
-     inkscape:zoom="9.7263013"
-     inkscape:cx="762.57148"
-     inkscape:cy="413.98059"
-     inkscape:window-width="1920"
-     inkscape:window-height="1016"
+     inkscape:zoom="1.8302877"
+     inkscape:cx="773.10252"
+     inkscape:cy="513.03411"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -741,14 +741,14 @@
    id="tspan502556">| Housing Geographry</tspan></tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.175px;line-height:1.3;font-family:sans-serif;fill:#676868;fill-opacity:1;stroke-width:0.264583;stroke:none;stroke-opacity:1"
-       x="165.95872"
+       style="font-size:3.175px;line-height:1.3;font-family:sans-serif;fill:#676868;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       x="165.82018"
        y="138.9192"
        id="text2525-4"><tspan
          sodipodi:role="line"
          id="tspan2523-71"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.175px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#676868;fill-opacity:1;stroke-width:0.264583;stroke:none;stroke-opacity:1"
-         x="165.95872"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#676868;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+         x="165.82018"
          y="138.9192">5km</tspan></text>
     <text
        xml:space="preserve"
@@ -768,7 +768,7 @@
        y="131.06825"
        id="text2525-4-6-6"><tspan
          sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.76389px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;fill-opacity:1;stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76389px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#808080;fill-opacity:1;stroke-width:0.264583"
          x="195.76009"
          y="131.06825"
          id="tspan116782">Data Sources:</tspan><tspan
@@ -823,18 +823,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
        x="219.10551"
-       y="109.62411"
+       y="110.7"
        id="text2525-4-6-6-2-3-2"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
          x="219.10551"
-         y="109.62411"
-         id="tspan348110">not in subsidized </tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
-         x="219.10551"
-         y="111.74078"
-         id="tspan403655">housing</tspan></text>
+         y="110.7"
+         id="tspan403655">not in subsidized housing</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.3;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
@@ -875,14 +870,14 @@
          id="tspan409733">51.9%</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.175px;line-height:1.3;font-family:sans-serif;fill:#676868;fill-opacity:1;stroke-width:0.264583;stroke:none;stroke-opacity:1"
+       style="font-size:3.175px;line-height:1.3;font-family:sans-serif;fill:#676868;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
        x="216.10216"
        y="82.434654"
        id="text2525-4-5"
        transform="rotate(15)"><tspan
          sodipodi:role="line"
          id="tspan2523-71-1"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:3.175px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#676868;fill-opacity:1;stroke-width:0.264583;stroke:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#676868;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
          x="216.10216"
          y="82.434654">N</tspan></text>
     <text
@@ -1005,8 +1000,8 @@
          d="M 210.11672,114.50487 H 210.82"
          id="path480513" />
       <path
-         style="fill:#e1e1e1;stroke:#c0c1c0;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-         d="M 210.11672,104.41249 H 210.82"
+         style="fill:#e1e1e1;fill-opacity:1;stroke:#c0c1c0;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 210.11672,104.6063 H 210.82"
          id="path19368-3-0-4-6" />
       <path
          style="fill:#e1e1e1;stroke:#c0c1c0;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
@@ -1025,8 +1020,8 @@
          d="m 210.82,102.87 h 0.70327"
          id="path19368-0-0-6-8" />
       <path
-         style="fill:#e1e1e1;stroke:#c0c1c0;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1"
-         d="m 210.82,104.41249 h 0.70327"
+         style="fill:#e1e1e1;fill-opacity:1;stroke:#c0c1c0;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 210.82,104.6063 h 0.70327"
          id="path19368-0-0-6-0" />
     </g>
     <path
@@ -1092,19 +1087,19 @@
        d="m 195.58,128.27 c 1.27,0 48.26,0 48.26,0"
        id="path188113" />
     <rect
-       style="opacity:1;fill:#f1c500;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0826587;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#f1c500;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0875612;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect272600"
-       width="1.5212215"
+       width="1.7070197"
        height="2.5400095"
        x="102.87"
        y="-209.55"
        transform="rotate(90)" />
     <rect
-       style="opacity:1;fill:#dc4633;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.212731;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#dc4633;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.21076;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect272600-7"
-       width="10.075674"
+       width="9.8898592"
        height="2.5400095"
-       x="104.39122"
+       x="104.57703"
        y="-209.55"
        transform="rotate(90)" />
     <rect
@@ -1133,7 +1128,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
          x="212.23775"
          y="118.66991"
-         id="tspan352816-7-1">29.3%</tspan></text>
+         id="tspan352816-7-1">29.4%</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.3;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
@@ -1144,18 +1139,18 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
          x="212.17245"
          y="110.8117"
-         id="tspan352816-7-1-4">41.8%</tspan></text>
+         id="tspan352816-7-1-4">41.3%</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.3;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
-       x="212.7365"
+       x="213.01939"
        y="104.42433"
        id="text2525-4-6-6-2-3-9-0-03-7"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
-         x="212.7365"
+         x="213.01939"
          y="104.42433"
-         id="tspan352816-7-1-4-0">6.3%</tspan></text>
+         id="tspan352816-7-1-4-0">6.8%</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.3;font-family:'TradeGothic LT';-inkscape-font-specification:'TradeGothic LT, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
@@ -1166,7 +1161,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;font-family:'TradeGothic LT Bold';-inkscape-font-specification:'TradeGothic LT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#4d4d4d;fill-opacity:1;stroke-width:0.264583"
          x="212.15591"
          y="125.07819"
-         id="tspan352816-7-1-5">22.6%</tspan></text>
+         id="tspan352816-7-1-5">22.5%</tspan></text>
     <path
        style="fill:none;stroke:#f2f5f5;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 207.00999,114.4669 2.54001,0"
@@ -1174,7 +1169,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#f2f5f5;stroke-width:0.149718;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 207.00999,104.39122 H 209.55"
+       d="M 207.00999,104.59316 H 209.55"
        id="path19368-0-0-2-5"
        sodipodi:nodetypes="cc" />
     <path
