@@ -36,7 +36,7 @@ output = []
 for da in da["features"]:
     
     dauid = da["properties"]["name"]
-    population = int(da["properties"]["population"])
+    population = int(da["properties"]["population"]) / 10
     
     da_x = da["geometry"]["coordinates"][0]
     da_y = da["geometry"]["coordinates"][1]    
@@ -60,7 +60,7 @@ for da in da["features"]:
     
 with open("od-flows.csv", "w") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["dauid","hospital_id","population"])
+    writer.writerow(["dauid","hospital_id","trips"])
     for row in output:
         writer.writerow(row)
         
