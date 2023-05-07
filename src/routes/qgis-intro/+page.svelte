@@ -3,7 +3,7 @@
 	import Top from "../lib/TopSofC.svelte";
 	import '../styles.css';
 
-    import imgCoords from './assets/coords.png';
+    import imgCoords from './assets/spatial-data.svg';
     import imgOsmCollege from './assets/osm-college.png';
     import imgDemToronto from './assets/dem-toronto.png';
     import imgGisLayers from './assets/gis-layers.png';

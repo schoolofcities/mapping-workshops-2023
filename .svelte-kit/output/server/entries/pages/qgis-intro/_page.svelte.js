@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component, d as add_attribute } from "../../../chunks/index.js";
 import { T as TopSofC } from "../../../chunks/TopSofC.js";
-/* empty css                      */const imgCoords = "/mapping-workshops-2023/_app/immutable/assets/coords-8d7033f1.png";
+/* empty css                      */const imgCoords = "/mapping-workshops-2023/_app/immutable/assets/spatial-data-2dcc30b3.svg";
 const imgOsmCollege = "/mapping-workshops-2023/_app/immutable/assets/osm-college-bf243ca2.png";
 const imgDemToronto = "/mapping-workshops-2023/_app/immutable/assets/dem-toronto-c547fdc3.png";
 const imgGisLayers = "/mapping-workshops-2023/_app/immutable/assets/gis-layers-479f3a99.png";
