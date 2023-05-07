@@ -59,11 +59,12 @@ ${validate_component(TopSofC, "Top").$$render($$result, {}, {}, {})}
 
         <p>The two most common forms of spatial data are <b>vector</b> data and <b>raster</b> data.</p>
 
+        <img${add_attribute("src", imgCoords, 0)} alt="${"coords"}">
+
         <h3>Vector Data</h3>
 
         <p>Vector data uses geographic coordinates, or a series of coordinates, to create points, lines, and polygons representing real-world features.</p>
-
-        <img width="${"400"}"${add_attribute("src", imgCoords, 0)} alt="${"coords"}">
+        
 
         <p>e.g. in the map below (a screenshot of <a href="${"https://www.openstreetmap.org/"}" target="${"_blank"}">OpenStreetMap</a>) lines are used to represent roads and rail, points for retail, polygons for parks and buildings, etc. </p>
 
